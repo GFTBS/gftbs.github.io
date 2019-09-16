@@ -1,5 +1,4 @@
 #include <iostream>  
-int main(void){  
-std::cout<<"I will use C++\n";  
-return 0;  
+void helloWorld(void){
+std::cout<<"I will use C++\n";
 }  

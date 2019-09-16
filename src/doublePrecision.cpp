@@ -1,6 +1,6 @@
 #include <math.h>
 
-int singlePrecision(int maxPrecision){  //used to check machine precision on the central difference form of f(x) = .5*x^2 at x = pi answer should be pi.
+int doublePrecision(int maxPrecision){  //used to check machine precision on the central difference form of f(x) = .5*x^2 at x = pi answer should be pi.
     double pi = M_PI;
     double error = 5, newError, h = 1.0/1.0;
     int precision = -1;
