@@ -12,7 +12,9 @@ https://gftbs.github.io/src/HelloWorld.cpp
 https://gftbs.github.io/Software_Manual/toc
 ### Task 5 Email A link to the table of contents.
 https://gftbs.github.io/Homework/hw_toc
-### Task 6
+### Task 6  
+Single precision https://gftbs.github.io/src/singlePrecision.cpp  
+double precision https://gftbs.github.io/src/doublePrecision.cpp  
 
 ### Task 7
 absolute Error  
