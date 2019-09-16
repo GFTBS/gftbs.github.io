@@ -12,11 +12,11 @@ std::cout<<"I will use C++\n";
 return 0;  
 }  
 ### Task 5 Email A link to the table of contents.
-https://gftbs.github.io/Homework/hw_toc.md
+https://gftbs.github.io/Homework/hw_toc
 ### Task 6
 
 ### Task 7
-
+https://gftbs.github.io/Software_Manual/toc
 ### Task 8
 
 ### Task 9
