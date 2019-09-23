@@ -7,21 +7,19 @@ Added
 Windows or Linux, Mostly windows.
 ### Task 4 write a code in the language you intend to use.
 Hello World  
-https://gftbs.github.io/src/HelloWorld.cpp  
+[Hello World.cpp](https://gftbs.github.io/src/HelloWorld.cpp)  
 
-https://gftbs.github.io/Software_Manual/toc
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
 ### Task 5 Email A link to the table of contents.
-https://gftbs.github.io/Homework/hw_toc
+[Table Of Contents](https://gftbs.github.io/Homework/hw_toc)
 ### Task 6  
-Single precision https://gftbs.github.io/src/singlePrecision.cpp  
-double precision https://gftbs.github.io/src/doublePrecision.cpp  
+[Single precision](https://gftbs.github.io/src/singlePrecision.cpp)   
+[Double precision](https://gftbs.github.io/src/doublePrecision.cpp)   
 
 ### Task 7
-absolute Error  
-https://gftbs.github.io/src/absoluteError.cpp  
-relative error  
-https://gftbs.github.io/src/relativeError.cpp  
-https://gftbs.github.io/Software_Manual/toc
+[Absolute Error](https://gftbs.github.io/src/absoluteError.cpp)  
+[Relative error](https://gftbs.github.io/src/relativeError.cpp)  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
 ### Task 8
 
 ### Task 9
