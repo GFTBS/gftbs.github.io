@@ -2,7 +2,7 @@
 Use this table of contents to quickly find the routine you are looking for  
 ##Basic Routines    
 [Absolute Error](https://gftbs.github.io/src/absoluteError.cpp)    
-[Relative Error](https://gftbs.github.io/src/relativeError.cpp) 
+[Relative Error](https://gftbs.github.io/src/relativeError.cpp)   
 [Single Precision Test](https://gftbs.github.io/src/singlePrecision.cpp)    
 [Double Precision Test](https://gftbs.github.io/src/doublePrecision.cpp)    
 
