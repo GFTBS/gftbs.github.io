@@ -2,7 +2,9 @@
 #include "library.hpp"
 
 int main(){
-    double a = absError(5,2);
-    std::cout<<a<<std::endl;
+    int a = singlePrecision(100);
+    std::cout<<"Single Precision: "<<a<<" Binary Digits\n";
+    a = doublePrecision(100);
+    std::cout<<"Double Precision: "<<a<<" Binary Digits\n";
     return 0;
 }

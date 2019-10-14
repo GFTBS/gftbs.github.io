@@ -12,10 +12,13 @@ int doublePrecision(int maxPrecision){  //used to check machine precision on the
     int precision = -1;
 
     for (int i=1; i<maxPrecision;++i){
-        newError = 2*pi - ((pow((pi+h),2) - pow((pi-h),2))/((pi+h) - (pi - h)));
-        if (newError < error){
+        newError = std::abs(2*pi - (((pi+h)*(pi+h) - (pi-h)*(pi-h))/((pi+h) - (pi - h))));
+        if (newError <= error || newError ==0){
             error = newError;
             precision = i;
+        }
+        else{
+            break;
         }
 
         h = h/2;
@@ -38,11 +41,15 @@ int singlePrecision(int maxPrecision){  //used to check machine precision on the
     int precision = -1;
 
     for (int i=1; i<maxPrecision;++i){
-        newError = 2*pi - ((pow((pi+h),2) - pow((pi-h),2))/((pi+h) - (pi - h)));
-        if (newError < error){
+        newError = std::abs(2*pi - (((pi+h)*(pi+h) - (pi-h)*(pi-h))/((pi+h) - (pi - h))));
+        if (newError <= error || error == 0) {
             error = newError;
             precision = i;
         }
+        else{
+            break;
+        }
+
 
         h = h/2;
     }
