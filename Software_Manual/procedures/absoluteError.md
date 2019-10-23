@@ -20,11 +20,11 @@ Output from the lines above:
 
       1
 
-**Implementation/Code:** The following is the code for smaceps()
+**Implementation/Code:** The following is the code for absError(double computed, double actual)
 
-double absError(double computed, double actual){  
-    return actual - computed;  
-}  
+double absError(double computed, double actual){
+    return std::abs(actual - computed);
+}
 
 
-**Last Modified:** September/2019
+**Last Modified:** October/2019
