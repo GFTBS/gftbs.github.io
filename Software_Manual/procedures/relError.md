@@ -1,4 +1,4 @@
-# Absolute Error  
+# Relative Error  
 
 **Routine Name:**           relError  
 
