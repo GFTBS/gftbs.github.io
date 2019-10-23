@@ -10,6 +10,12 @@ int main(){
     std::cout<<"Single Precision: "<<a<<" Binary Digits\n";
     a = doublePrecision(100);
     std::cout<<"Double Precision: "<<a<<" Binary Digits\n";
+    double pi = M_PI;
+    double e = M_E;
+    double hh = 1.0/pow(2,a-1);
+    double actual = pow(e,pi);
+    double calculated = ((double)(pow(e,pi+hh) - pow(e,pi-hh)))/((double)((pi+hh) - (pi - hh)));
+    std::cout<<"\ncalculated e^pi = "<<calculated<<"\nActual e^pi = "<<actual<<"\nAbsolute error = "<<absError(calculated,actual)<<"\nRelative Error = "<<relError(calculated,actual)<<std::endl;
     doublePrecisionTest(a+3);
 
 
