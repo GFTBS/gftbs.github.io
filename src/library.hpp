@@ -3,7 +3,6 @@
 
 int singlePrecision(int maxPrecision);
 double relError(double computed, double actual);
-void helloWorld();
 int doublePrecision(int maxPrecision);
 double absError(double computed, double actual);
 
