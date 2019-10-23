@@ -1,6 +1,6 @@
-# Math 4610 Homework Solutions
+# Math 4610 Homework Solutions  
 
-## Links to Task Sheets
+## Links to Task Sheets  
 [Task Sheet 1](https://gftbs.github.io/Homework/TS1)  
 [Task Sheet 2](https://gftbs.github.io/Homework/TS2)  
 [Task Sheet 3](https://gftbs.github.io/Homework/TS3)  
@@ -11,6 +11,8 @@
 [Task Sheet 8](https://gftbs.github.io/Homework/TS8)  
 [Task Sheet 9](https://gftbs.github.io/Homework/TS9)  
 [Task Sheet 10](https://gftbs.github.io/Homework/TS10)  
-## Links to Projects
+## Links to Projects  
 
-## Link to Software Manual
+## Link to Software Manual  
+
+[Software Manual](https://gftbs.github.io/Software_Manual/toc)
