@@ -1,4 +1,4 @@
-# Absolute Error  
+# Double Precision  
 
 **Routine Name:**           doublePrecision  
 
