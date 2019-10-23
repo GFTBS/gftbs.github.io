@@ -14,15 +14,10 @@ Output:
 ### Task 5 Email A link to the table of contents.
 [Table Of Contents](https://gftbs.github.io/Homework/hw_toc)  
 
-### Task 6 Demonstrate
+### Task 6 Demonstrate machine precision causing errors as h decreases
 [Single Precision Test](https://gftbs.github.io/Software_Manual/procedures/singlePrecision)    
 [Double Precision Test](https://gftbs.github.io/Software_Manual/procedures/doublePrecision)  
 [Manual](https://gftbs.github.io/Software_Manual/toc)  
-
-### Task 7 Implement an absolute error and relative error routine
-[Absolute Error](https://gftbs.github.io/Software_Manual/procedures/absoluteError)    
-[Relative Error](https://gftbs.github.io/Software_Manual/procedures/relError)    
-[Manual](https://gftbs.github.io/Software_Manual/toc)   
 Task Sheet 1 demo  
 [main.cpp](https://gftbs.github.io/src/main.cpp)  
 Output:  
@@ -51,6 +46,12 @@ Output:
           End Example
 
 Note how error is reduced until line 18, where a smaller value of h starts yielding a larger error.  
+
+### Task 7 Implement an absolute error and relative error routine
+[Absolute Error](https://gftbs.github.io/Software_Manual/procedures/absoluteError)    
+[Relative Error](https://gftbs.github.io/Software_Manual/procedures/relError)    
+[Manual](https://gftbs.github.io/Software_Manual/toc)   
+
 ### Task 8 create a shared Library  
 Designated in CMakeLists.txt  
 [CMakeLists.txt](https://gftbs.github.io/src/CMakeLists.txt)  
