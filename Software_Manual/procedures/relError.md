@@ -6,11 +6,11 @@
 
 **Language:** C++ Compiles with cMake as designated in CMakeLists.txt  
 
-**Description/Purpose:** This routine will compute the absolute error between two numbers  
+**Description/Purpose:** This routine will compute the relative error between two numbers  
 
 **Input:** the computed value, and the expected value  
 
-**Output:** returns the difference between the two inputs  
+**Output:** returns the relative difference between the two inputs  
 
 **Usage/Example:**  
 
