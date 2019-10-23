@@ -20,7 +20,7 @@ Output from the lines above:
 
       1
 
-**Implementation/Code:** The following is the code for absError()
+**Implementation/Code:** The following is the code for absError(double computed, double actual)
 
 double absError(double computed, double actual){
     return std::abs(actual - computed);
