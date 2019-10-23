@@ -55,3 +55,18 @@ int singlePrecision(int maxPrecision){  //used to check machine precision on the
     //std::cout<<"Single Error: "<< error<<std::endl;
     return precision;
 }
+//x≈1.096327788292240187224006868725774624523189807363408824495262094888955008877488472442044026351833693544073747220676874491102970453662676747971345332569704084553 from wolfram
+
+double fixedPointIteration(double start){
+    double x =start;
+    double fx = x*cosh(x)+x*x*x-M_PI;
+    start =fx;
+
+    fx = x*cosh(x)+x*x*x-M_PI;
+
+    return 0;
+}
+double bisectionRoot(double low, double high){
+
+    return 0;
+}
