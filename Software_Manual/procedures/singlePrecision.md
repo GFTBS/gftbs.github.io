@@ -1,4 +1,4 @@
-# Absolute Error  
+# Single Precision  
 
 **Routine Name:**           singlePrecision  
 
