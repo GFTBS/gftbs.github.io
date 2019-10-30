@@ -7,5 +7,7 @@ Use this table of contents to quickly find the routine you are looking for
 [Double Precision Test](https://gftbs.github.io/Software_Manual/procedures/doublePrecision)    
 
 ##Root Finding Methods  
+[Bisection](https://gftbs.github.io/Software_Manual/procedures/bisectionRoot)  
+[Fixed Point Iteration](https://gftbs.github.io/Software_Manual/procedures/fixedPointIteration)  
 
 ##Linear Algebra Methods  
