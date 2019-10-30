@@ -2,10 +2,15 @@
 #### Task 1: Consider the nonlinear equation x cosh(x)+x^3=π. Set up a root finding problem for this equation.  
 Find x such that  
 x cosh(x)+x^3-π=0
-
+x<sub>n</sub><sup>3</sup> = π - x<sub>n+1</sub>cosh(x<sub>n+1</sub>)
 #### Task 2: Consider the nonlinear equation x cosh(x)+x^3=π. Set up at least two associated fixed point iteration for this equation.  
 ###### For fixed point iteration  
-x<sub>n</sub><sup>3</sup> = π - x<sub>n+1</sub>cosh(x<sub>n+1</sub>)
+x<sub>n</sub><sup>3</sup> = π - x<sub>n+1</sub>cosh(x<sub>n+1</sub>)  
+at x<sub>n</sub> = 0, x<sub>n+1</sub> = -1.42655
+at x<sub>n</sub> = -1.42655, x<sub>n+1</sub> = -1.85182  
+
+because the second iteration had a smaller difference between x<sub>n</sub> and x<sub>n+1</sub> i believe this has the possibility to converge  
+
 ###### For Bisection
 on the interval \[0,2\] the values are \[-pi,12.382\]  
 Next the intermediate value of 1 would be tried and found to be -0.5985120187745494  
