@@ -1,14 +1,11 @@
-# Task Sheet 2
+﻿# Task Sheet 2
 #### Task 1: Consider the nonlinear equation x cosh(x)+x^3=π. Set up a root finding problem for this equation.  
 Find x such that  
 x cosh(x)+x^3-π=0
 
 #### Task 2: Consider the nonlinear equation x cosh(x)+x^3=π. Set up at least two associated fixed point iteration for this equation.  
 ###### For fixed point iteration  
-Starting at x =0 f(0) = -pi
-x will increment to 1 and f(1) = -0.5985120187745494  
-Next x will increment to 2 and f(2) = 12.382  
-Because it crossed from negative to positive it will begin to backtrack by only taking a half step of x = 1.5
+x<sub>n</sub>^3 = π - x<sub>n-1</sub>cosh(x<sub>n+1</sub>)
 ###### For Bisection
 on the interval \[0,2\] the values are \[-pi,12.382\]  
 Next the intermediate value of 1 would be tried and found to be -0.5985120187745494  
