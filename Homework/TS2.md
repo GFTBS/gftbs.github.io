@@ -5,7 +5,7 @@ x cosh(x)+x^3-π=0
 
 #### Task 2: Consider the nonlinear equation x cosh(x)+x^3=π. Set up at least two associated fixed point iteration for this equation.  
 ###### For fixed point iteration  
-x<sub>n</sub>^3 = π - x<sub>n-1</sub>cosh(x<sub>n+1</sub>)
+x<sub>n</sub><sup>3</sup> = π - x<sub>n-1</sub>cosh(x<sub>n+1</sub>)
 ###### For Bisection
 on the interval \[0,2\] the values are \[-pi,12.382\]  
 Next the intermediate value of 1 would be tried and found to be -0.5985120187745494  
