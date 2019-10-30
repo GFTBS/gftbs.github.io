@@ -1,6 +1,7 @@
 #include "library.hpp"
 #include <iostream>
 #include <cmath>
+#include <cfloat>
 
 double absError(double computed, double actual){
     return std::abs(actual - computed);
@@ -57,16 +58,45 @@ int singlePrecision(int maxPrecision){  //used to check machine precision on the
 }
 //x≈1.096327788292240187224006868725774624523189807363408824495262094888955008877488472442044026351833693544073747220676874491102970453662676747971345332569704084553 from wolfram
 
-double fixedPointIteration(double start){
-    double x =start;
-    double fx = x*cosh(x)+x*x*x-M_PI;
-    start =fx;
-
-    fx = x*cosh(x)+x*x*x-M_PI;
-
-    return 0;
+double fixedPointIteration(double start, int maxiters){ // x cosh(x)+x^3=π
+    auto pChange = DBL_MAX;
+    auto cChange =DBL_MAX;
+    double x = start;
+    double xn;
+    for(int i=0; i < maxiters && std::abs(cChange) <=std::abs(pChange)&& cChange!=0;++i) {
+        pChange = cChange;
+        xn = std::cbrt(M_PI - x*cosh(x));
+        cChange = x - xn;
+        x = xn;
+        //std::cout <<i<<": "<<x<<"\n"; //used to watch convergence
+    }
+    return x;
 }
-double bisectionRoot(double low, double high){
+double bisectionRoot(double low, double high){ // x cosh(x)+x^3=π
+    int machinePrecision = doublePrecision(100);
+    auto fx = [&](double x){
+        return x*x*x+x*cosh(x)-M_PI;
+    };
+    double middle = (high+low)/2;
+    double fmiddle = fx(middle);
+    double fhigh = fx(high);
+    double flow = fx(low);
+    for(int i =0; i <machinePrecision;++i){ //skips one so the last run returns middle
+        if(flow == 0) return low;
+        if(fhigh == 0) return high;
+        if(fmiddle ==0)return middle;
+        if(flow*fhigh>=0) return DBL_MAX;
+        if(flow*fmiddle<=0){
+            high = middle;
+        }
+        else{
+            low = middle;
+        }
 
-    return 0;
+        middle = (high+low)/2;
+        fmiddle = fx(middle);
+        fhigh = fx(high);
+        flow = fx(low);
+    }
+    return middle;
 }
