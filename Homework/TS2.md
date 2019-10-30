@@ -16,7 +16,7 @@ on the interval \[0,2\] the values are \[-pi,12.382\]
 Next the intermediate value of 1 would be tried and found to be -0.5985120187745494  
 because it is negative it will replace the negative number and the new interval will be \[1,2\]  
 #### Task 3: Write code that implements fixed point iteration for the equation defined in the previous two tasks.  
-output of TS2Demo:  
+output of [TS2Demo](https://gftbs.github.io/src/TS2Demo.cpp):  
 
         fixed point iteration of x cosh(x)+x^3=pi
         expected value: 1.09633
@@ -27,7 +27,7 @@ output of TS2Demo:
 [Manual](https://gftbs.github.io/Software_Manual/toc)  
 
 #### Task 4: Write a code that computes the roots of a function of one variable using the Bisection method.  
-output of TS2Demo:  
+output of [TS2Demo](https://gftbs.github.io/src/TS2Demo.cpp):  
 
         Bisection of x cosh(x)+x^3=pi
         expected value: 1.09633
