@@ -9,5 +9,6 @@ Use this table of contents to quickly find the routine you are looking for
 ##Root Finding Methods  
 [Bisection](https://gftbs.github.io/Software_Manual/procedures/bisectionRoot)  
 [Fixed Point Iteration](https://gftbs.github.io/Software_Manual/procedures/fixedPointIteration)  
+[Newtons Method](https://gftbs.github.io/Software_Manual/procedures/NewtonsRoot)
 
 ##Linear Algebra Methods  
