@@ -61,4 +61,6 @@ output of [TS2Demo](https://gftbs.github.io/src/TS2Demo.cpp):
 
 #### Task 9: Compare the results from functional iteration and Bisection on the problems in Tasksheet 2, Task 1 and Task2.  
 both routines obtained at least 5 decimal values of accuracy. However, Bisection did it in 18 iterations where fixed point took around 65 iterations.
-#### Task 10: Search the internet for sites that discuss functional iteration for root finding.
+#### Task 10: Search the internet for sites that discuss functional iteration for root finding.  
+http://monthadar.blogspot.com/2010/01/fixed-point-iteration.html  
+This site discusses how fixed point iteration typically converges faster, but is harder to set up. Sometimes convergence is slower than bisection method, especially when an initial guess is too far away. The major drawback to FPI is that an incorrect setup will yield no convergence.  
