@@ -332,3 +332,118 @@ std::vector<double> multiSecant(double step, int numRoots){
     }
     return roots;
 }
+
+//Vector Math###########################################################################################################
+
+double oneNorm(const std::vector<double>& vector){
+    double norm =0;
+    for(double thing : vector){
+        norm += std::abs(thing);
+    }
+    return norm;
+}
+double twoNorm(const std::vector<double>& vector) {
+    double norm =0;
+    for(double thing : vector){
+        norm += thing*thing;
+    }
+    return std::sqrt(norm);
+}
+double infNorm(const std::vector<double>& vector) {
+    double norm =0;
+    for(double thing : vector){
+        if(std::abs(thing)>norm){
+            norm = thing;
+        }
+    }
+    return norm;
+}
+double absErrorOneNorm(const std::vector<double>& approx, const std::vector<double>& exact){
+    if(approx.size()!=exact.size()){ return DBL_MAX;}
+    std::vector<double> combo;
+    for(unsigned int i =0;i<approx.size();i++){
+        combo.push_back(approx[i]-exact[i]);
+    }
+    return oneNorm(combo);
+}
+double relErrorOneNorm(const std::vector<double>& approx, const std::vector<double>& exact){
+    if(approx.size()!=exact.size()){ return DBL_MAX;}
+    std::vector<double> combo;
+    for(unsigned int i =0;i<approx.size();i++){
+        combo.push_back(approx[i]-exact[i]);
+    }
+    return oneNorm(combo)/oneNorm(approx);
+}
+double absErrorTwoNorm(const std::vector<double>& approx, const std::vector<double>& exact){
+    if(approx.size()!=exact.size()){ return DBL_MAX;}
+    std::vector<double> combo;
+    for(unsigned int i =0;i<approx.size();i++){
+        combo.push_back(approx[i]-exact[i]);
+    }
+    return twoNorm(combo);
+}
+double relErrorTwoNorm(const std::vector<double>& approx, const std::vector<double>& exact){
+    if(approx.size()!=exact.size()){ return DBL_MAX;}
+    std::vector<double> combo;
+    for(unsigned int i =0;i<approx.size();i++){
+        combo.push_back(approx[i]-exact[i]);
+    }
+    return twoNorm(combo)/oneNorm(approx);
+}
+double absErrorInfNorm(const std::vector<double>& approx, const std::vector<double>& exact){
+    if(approx.size()!=exact.size()){ return DBL_MAX;}
+    std::vector<double> combo;
+    for(unsigned int i =0;i<approx.size();i++){
+        combo.push_back(approx[i]-exact[i]);
+    }
+    return infNorm(combo);
+}
+double relErrorInfNorm(const std::vector<double>& approx, const std::vector<double>& exact){
+    if(approx.size()!=exact.size()){ return DBL_MAX;}
+    std::vector<double> combo;
+    for(unsigned int i =0;i<approx.size();i++){
+        combo.push_back(approx[i]-exact[i]);
+    }
+    return infNorm(combo)/infNorm(approx);
+}
+std::vector<double> vectorAdd(const std::vector<double>& v1, const std::vector<double>& v2){
+    if(v1.size()!=v2.size()){ return std::vector<double> {0};}
+    std::vector<double> answer;
+    for(unsigned int i =0; i < v1.size();++i){
+        answer.push_back(v1[i]+v2[i]);
+    }
+    return answer;
+}
+std::vector<double> vectorSub(const std::vector<double>& v1, const std::vector<double>& v2){
+    if(v1.size()!=v2.size()){ return std::vector<double> {0};}
+    std::vector<double> answer;
+    for(unsigned int i =0; i < v1.size();++i){
+        answer.push_back(v1[i]-v2[i]);
+    }
+    return answer;
+}
+std::vector<double> vectorScale(const std::vector<double>& v1, double scale){
+    std::vector<double> answer;
+    answer.reserve(v1.size());
+for(double i : v1){
+        answer.push_back(i*scale);
+    }
+    return answer;
+}
+double dotProduct(const std::vector<double>& v1, const std::vector<double>& v2){
+    double answer =0;
+    if(v1.size()!=v2.size()){ return answer;}
+    for(unsigned int i =0; i < v1.size();++i){
+        answer+=v1[i]*v2[i];
+    }
+    return answer;
+}
+std::vector<double> crossProduct(const std::vector<double>& v1, const std::vector<double>& v2){
+    if(v1.size()!=v2.size()){ return std::vector<double> {0};}
+    unsigned int size = v1.size();
+    std::vector<double> answer;
+    for(unsigned int i =0; i < v1.size();++i){
+        answer.push_back(v1[(i+1)%size]*v2[(i+2)%size]-v1[(i+2)%size]*v2[(i+1)%size]);
+    }
+    return answer;
+}
