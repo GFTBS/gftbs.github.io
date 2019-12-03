@@ -35,8 +35,22 @@ output of [TS3Demo](https://gftbs.github.io/src/TS3Demo.cpp):
 [Manual](https://gftbs.github.io/Software_Manual/toc)   
 
 #### Task 6: Add the routines created thus far to your shared library. There should be 8 to 10 routines so far in the course.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
 #### Task 7: In some cases it is necessary to find a number of roots for a function of one variable. Suppose that we know there are several roots in a given interval. Develop code that will break the interval into subintervals and apply the Bisection method to each subinterval. Apply this to the following function  
 f(x)=sin(πx2+3.7) Use the interval [1.1,68.3].  
+output of [TS3Demo](https://gftbs.github.io/src/TS3Demo.cpp):  
+
+        5 bisection roots of f(x)=sin(pi*x*2+3.7): 1.41113 1.91113 2.41113 2.91113 3.41113
+
 #### Task 8: Repeat the work from Task 7 using Newton's method.  
+
+output of [TS3Demo](https://gftbs.github.io/src/TS3Demo.cpp):  
+
+        5 Newton's roots of f(x)=sin(pi*x*2+3.7): 1.91113 2.41113 2.91113 3.41113 3.91113  
+        
 #### Task 9: Repeat the work from Task 7. using the secant method.  
+
+output of [TS3Demo](https://gftbs.github.io/src/TS3Demo.cpp):  
+
+        5 Secant roots of f(x)=sin(pi*x*2+3.7): 1.41113 1.91113 2.41113 2.91113 3.41113
 #### Task 10: Search the internet for sites that identify real problems where some root finding problem is used to compute approximate solutions. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.  
