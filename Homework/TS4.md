@@ -1,8 +1,11 @@
 Task 1: Determine if there might be an advantage to using one of the hybrid methods for root finding for the problem defined in Task 7 on Tasksheet 3. Justify your answer with results from your codes.  
 The hybrid methods give Newton's Method and Secant method good starting points. With Secant method if the starting point is too far away from the root the answer is useless.  
+output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):  
+  
   
   
 Task 2: Develop codes to compute the length of a vector of arbitrary length using the 1-norm, 2-norm, and infinity norm. Add the object modules to your shared library and create three pages to put in your software manual.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
 
 Task 3: Develop codes that compute the absolute and relative error in using one vector x as an approximation of another vector,x∗. Create these routines for the 1-norm, 2-norm, and infinity norm. Make sure you add these routines to your shared library and create software manual pages for all 6 codes.  
 
