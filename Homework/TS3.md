@@ -12,8 +12,8 @@ output of [TS3Demo](https://gftbs.github.io/src/TS3Demo.cpp):
 
         Secant method of x cosh(x)+x^3=pi
         expected value: 1.09633
-        calculated: 1.09306
-
+        calculated: 1.09306  
+From observations Secant method worked the fastest but had the greatest error. Newtons method had similar error to fixed point iteration and bisection but worked much faster. 
 
 
 #### Task 4: Develop and implement a hybrid method for approximate solution of root finding problems in one variable. Use the bisection method to start the algorithm and switch to Newton's method when the iterates are close enough. Create a page in your software manual for this code.  
