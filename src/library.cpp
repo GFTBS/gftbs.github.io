@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cmath>
 #include <cfloat>
+#include <vector>
 
 double absError(double computed, double actual){
     return std::abs(actual - computed);
@@ -118,4 +119,216 @@ double newtonsRoot(double start, int maxiters){ // x cosh(x)+x^3=π
         //std::cout <<i<<": "<<x<<"\n"; //used to watch convergence
     }
     return x;
+}
+
+double secantRoot(double start, int maxiters){ // x cosh(x)+x^3=π
+    auto pChange = DBL_MAX;
+    auto cChange =DBL_MAX;
+    double x = start;
+    double xn,xp;
+    auto fx = [&](double y){
+        return (M_PI - y*y*y)/cosh(y);
+    };
+    xp= fx(1.09);
+    for(int i=0; i < maxiters && std::abs(cChange) <=std::abs(pChange)&& cChange!=0;++i) {
+        pChange = cChange;
+        xn = xp- (fx(x)*x-fx(x)*xp)/(fx(x)-fx(xp));
+        cChange = x - xn;
+        xp =x;
+        x = xn;
+        //std::cout <<i<<": "<<x<<"\n"; //used to watch convergence
+    }
+    return x;
+}
+
+double mixedNewtRoot(double low, double high, int maxiters){ // x cosh(x)+x^3=π
+    int machinePrecision = doublePrecision(100);
+    auto fx = [&](double x){
+        return x*x*x+x*cosh(x)-M_PI;
+    };
+    double middle = (high+low)/2;
+    double fmiddle = fx(middle);
+    double fhigh = fx(high);
+    double flow = fx(low);
+    for(int i =0; i <machinePrecision;++i){ //skips one so the last run returns middle
+        if(flow == 0) return low;
+        if(fhigh == 0) return high;
+        if(fmiddle ==0)return middle;
+        if(flow*fhigh>=0) return DBL_MAX;
+        if(flow*fmiddle<=0){
+            high = middle;
+        }
+        else{
+            low = middle;
+        }
+
+        middle = (high+low)/2;
+        fmiddle = fx(middle);
+        fhigh = fx(high);
+        flow = fx(low);
+        if(std::abs(low-high) < .25){
+            break;
+        }
+    }
+    return newtonsRoot(middle, maxiters);
+}
+double mixedSecantRoot(double low, double high, int maxiters){ // x cosh(x)+x^3=π
+    int machinePrecision = doublePrecision(100);
+    auto fx = [&](double x){
+        return x*x*x+x*cosh(x)-M_PI;
+    };
+    double middle = (high+low)/2;
+    double fmiddle = fx(middle);
+    double fhigh = fx(high);
+    double flow = fx(low);
+    for(int i =0; i <machinePrecision;++i){ //skips one so the last run returns middle
+        if(flow == 0) return low;
+        if(fhigh == 0) return high;
+        if(fmiddle ==0)return middle;
+        if(flow*fhigh>=0) return DBL_MAX;
+        if(flow*fmiddle<=0){
+            high = middle;
+        }
+        else{
+            low = middle;
+        }
+
+        middle = (high+low)/2;
+        fmiddle = fx(middle);
+        fhigh = fx(high);
+        flow = fx(low);
+        if(std::abs(low-high) < .01){
+            break;
+        }
+    }
+    return secantRoot(middle, maxiters);
+}
+std::vector<double> multiBisection(double step, int numRoots){
+    auto fx = [&](double x){
+        return sin(M_PI*x*2+3.7);
+    };
+    auto bisect = [&](double low,double high){
+        auto fx = [&](double x){
+            return sin(M_PI*x*2+3.7);
+        };
+        int machinePrecision = doublePrecision(100);
+        double middle = (high+low)/2;
+        double fmiddle = fx(middle);
+        double fhigh = fx(high);
+        double flow = fx(low);
+        for(int i =0; i <machinePrecision;++i){ //skips one so the last run returns middle
+            if(flow == 0) return low;
+            if(fhigh == 0) return high;
+            if(fmiddle ==0)return middle;
+            if(flow*fhigh>=0) return DBL_MAX;
+            if(flow*fmiddle<=0){
+                high = middle;
+            }
+            else{
+                low = middle;
+            }
+
+            middle = (high+low)/2;
+            fmiddle = fx(middle);
+            fhigh = fx(high);
+            flow = fx(low);
+        }
+        return middle;
+    };
+    std::vector<double> roots;
+    double range[2] = {1.1,68.3};
+    double current = range[0]+step;
+    double low = range[0];
+    if(fx(low)==0){roots.push_back(current);}
+    while(current<=range[1]&&roots.size()<numRoots){
+        if(fx(current)==0){roots.push_back(current);}
+        if(fx(current)*fx(low)<0){
+            roots.push_back(bisect(low,current));
+        }
+        low = current;
+        current +=step;
+    }
+    return roots;
+}
+std::vector<double> multiNewtons(double step, int numRoots){
+    auto fx = [&](double x){
+        return sin(M_PI*x*2+3.7);
+    };
+    auto newton = [&](double start){
+        auto fx = [&](double x){
+            return sin(M_PI*x*2+3.7);
+        };
+        auto fpx = [&](double x){
+            return cos(M_PI*x*2+3.7)*2*M_PI;
+        };
+        auto pChange = DBL_MAX;
+        auto cChange =DBL_MAX;
+        int precision = doublePrecision(100);
+        double h = 1;
+        for(int i =0;i<precision;i++){
+            h = h/2;
+        }
+        double x = start;
+        double xn;
+        for(int i=0; i < 100 && cChange!=0;++i) {
+            pChange = cChange;
+            xn = x - fx(x) / fpx(x);
+            cChange = x - xn;
+            x = xn;
+            //std::cout <<i<<": "<<x<<"\n"; //used to watch convergence
+        }
+        return x;
+    };
+    std::vector<double> roots;
+    double range[2] = {1.1,68.3};
+    double current = range[0]+step;
+    double low = range[0];
+    if(fx(low)==0){roots.push_back(current);}
+    while(current<=range[1]&&roots.size()<numRoots){
+        if(fx(current)==0){roots.push_back(current);}
+        if(fx(current)*fx(low)<0){
+            roots.push_back(newton(current));
+        }
+        low = current;
+        current +=step;
+    }
+    return roots;
+}
+std::vector<double> multiSecant(double step, int numRoots){
+    auto fx = [&](double x){
+        return sin(M_PI*x*2+3.7);
+    };
+    auto secant = [&](double start){
+        auto fx = [&](double x){
+            return sin(M_PI*x*2+3.7);
+        };
+        auto pChange = DBL_MAX;
+        auto cChange =DBL_MAX;
+        double x = start;
+        double xn,xp;
+        xp= x-.01;
+        for(int i=0; i < 100 && std::abs(cChange) <=std::abs(pChange)&& cChange!=0;++i) {
+            pChange = cChange;
+            xn = x- fx(x)*((x-xp)/(fx(x)-fx(xp)));
+            cChange = x - xn;
+            xp =x;
+            x = xn;
+            //std::cout <<i<<": "<<x<<"\n"; //used to watch convergence
+        }
+        return x;
+    };
+    std::vector<double> roots;
+    double range[2] = {1.1,68.3};
+    double current = range[0]+step;
+    double low = range[0];
+    if(fx(low)==0){roots.push_back(current);}
+    while(current<=range[1]&&roots.size()<numRoots){
+        if(fx(current)==0){roots.push_back(current);}
+        if(fx(current)*fx(low)<0){
+            roots.push_back(secant(current));
+        }
+        low = current;
+        current +=step;
+    }
+    return roots;
 }
