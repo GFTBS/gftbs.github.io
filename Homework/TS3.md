@@ -54,3 +54,5 @@ output of [TS3Demo](https://gftbs.github.io/src/TS3Demo.cpp):
 
         5 Secant roots of f(x)=sin(pi*x*2+3.7): 1.41113 1.91113 2.41113 2.91113 3.41113
 #### Task 10: Search the internet for sites that identify real problems where some root finding problem is used to compute approximate solutions. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.  
+https://www.reed.edu/physics/courses/P200.L.S11/Physics200Lab/files/Bisection.pdf  
+This site discusses how root finding methods are used to keep orbits together. It's interesting here that error is included as perfectly acceptable thing. Error is guessed at, intrumentation measures it and a correction is made. 
