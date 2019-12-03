@@ -15,6 +15,9 @@ output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):
   
 #### Task 2: Develop codes to compute the length of a vector of arbitrary length using the 1-norm, 2-norm, and infinity norm. Add the object modules to your shared library and create three pages to put in your software manual.  
 [Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):  
+
+    one, two, and infinity norm of <1,2,3,4,5,6,7,8,9,10>: 55, 19.6214, 10
 
 #### Task 3: Develop codes that compute the absolute and relative error in using one vector x as an approximation of another vector,x∗. Create these routines for the 1-norm, 2-norm, and infinity norm. Make sure you add these routines to your shared library and create software manual pages for all 6 codes.  
 
