@@ -34,6 +34,10 @@ output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):
     v1+v2, v1-v2, v1*1.32 with v2 = <0,2,3,4,5,6,7,8,9,10>, v1 = <1,2,3,4,5,6,7,8,9,10>:
     <1,4,6,8,10,12,14,16,18,20,>, <1,0,0,0,0,0,0,0,0,0,>, <1.32,2.64,3.96,5.28,6.6,7.92,9.24,10.56,11.88,13.2,>  
 #### Task 5: Wrte a code that implements a "SAXPY" operation involing input of a couple of vectors and a scalar. Do an internet search to find out what a SAXPY operation. Add the routine to your shared library and the software manual.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp): 
+
+    Saxpy of 5.9 <1,1,0> , <0,1,1>: <5.9,6.9,1,>
 
 #### Task 6: Write codes to implement (1) the dot product of two vectors and (2) the cross product of two vectors. As usual, add these to your shared library and software manual.  
 
@@ -42,10 +46,24 @@ output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):
 
     Dot Product and cross product of <1,1,0> , <0,1,1>: 1, <1,-1,1,>
 #### Task 7: Create a routine that will return the output from multiplying a matrix into a vector from the left. Do this for a general rectangular matrix, A. That is, y=Ax  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp): 
+
+    Ax of A = {{1,2,3},{5,10,20},{1,1,1}} , x = {1,2,3}: <14,85,6,>
 
 #### Task 8: Download and use the "Hello World" handout that uses OpenMP to do a single print of a string for each processor your computer has. Report how many processors your laptop or desktop has.  
+My laptop has 4 processors
+output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp): 
+
+    Hello World... from thread: Hello World... from thread: 21
+
+    Hello World... from thread: Hello World... from thread: 0
+    3
 
 #### Task 9: Use OpenMP to try to speed up the matrix-vector multiplication using more than one processor.  
-
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+it may not be faster on small matrices, but it is parallel.  
 #### Task 10: Search the internet for sites that document optimization flags on compilers that you might use. For example, look for pages that talk about optimization flags on gcc or gfortran. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.  
+http://www.brianlheim.com/2018/04/09/cmake-cheat-sheet.html  
+I had no idea the compiler had an option to reduce size, this is really important for small integrated systems that may not have enough memory to be sloppy. It appears the compiler detects how for loops are used and may unravel them to save time, or even unravel recursive calls. Running full optimization also takes out debug information, making debugging a released version much more difficult.
 
