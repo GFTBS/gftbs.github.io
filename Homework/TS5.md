@@ -1,4 +1,6 @@
 #### Task 1: Write a method/routine that will compute the solution of a square linear systems of equations where the coefficient matrix is diagonal. Put an entry in your software manual that documents the method for diagonal systems.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
 
 #### Task 2: Write a method/routine that will compute the solution of an upper triangular system (the coefficient matrix is upper triangular) and put an entry in your software manual to document the routine.  
 
