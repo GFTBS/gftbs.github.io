@@ -46,6 +46,10 @@ output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):
 
     Dot Product and cross product of <1,1,0> , <0,1,1>: 1, <1,-1,1,>
 #### Task 7: Create a routine that will return the output from multiplying a matrix into a vector from the left. Do this for a general rectangular matrix, A. That is, y=Ax  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp): 
+
+    Ax of A = {{1,2,3},{5,10,20},{1,1,1}} , x = {1,2,3}: <14,85,6,>
 
 #### Task 8: Download and use the "Hello World" handout that uses OpenMP to do a single print of a string for each processor your computer has. Report how many processors your laptop or desktop has.  
 
