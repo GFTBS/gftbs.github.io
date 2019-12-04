@@ -61,6 +61,9 @@ output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):
     3
 
 #### Task 9: Use OpenMP to try to speed up the matrix-vector multiplication using more than one processor.  
-
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+it may not be faster on small matrices, but it is parallel.  
 #### Task 10: Search the internet for sites that document optimization flags on compilers that you might use. For example, look for pages that talk about optimization flags on gcc or gfortran. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.  
+http://www.brianlheim.com/2018/04/09/cmake-cheat-sheet.html  
+I had no idea the compiler had an option to reduce size, this is really important for small integrated systems that may not have enough memory to be sloppy. It appears the compiler detects how for loops are used and may unravel them to save time, or even unravel recursive calls. Running full optimization also takes out debug information, making debugging a released version much more difficult.
 
