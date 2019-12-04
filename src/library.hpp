@@ -35,5 +35,7 @@ std::vector<double> vectorSub(const std::vector<double>& v1, const std::vector<d
 std::vector<double> vectorScale(const std::vector<double>& v1, double scale);
 double dotProduct(const std::vector<double>& v1, const std::vector<double>& v2);
 std::vector<double> crossProduct(const std::vector<double>& v1, const std::vector<double>& v2);
+std::vector<double> saxpy(const std::vector<double>& v1, const std::vector<double>& v2, double scale);
+std::vector<double> matTimesVector(const std::vector<std::vector<double>>& matrix, const std::vector<double>& v);
 
 #endif //MATH4610_LIBRARY_HPP

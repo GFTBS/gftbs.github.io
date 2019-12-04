@@ -1,6 +1,10 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "openmp-use-default-none"
 #include "library.hpp"
 #include <iostream>
 #include <vector>
+#include <omp.h>
+
 int main(){
     std::cout << "mixed Secant method of x cosh(x)+x^3=pi starting range [0,20]\nexpected value: 1.09633\ncalculated: "<< mixedSecantRoot(0,20,100)<<"\n\n";
     std::cout << "Secant method of x cosh(x)+x^3=pi starting range [0,20]\nexpected value: 1.09633\ncalculated: "<< secantRoot(0,100)<<"\n\n";
@@ -35,6 +39,24 @@ int main(){
         std::cout<<thing<<",";
     }
     std::cout<<">\n\n";
+    std::cout <<"Saxpy of 5.9 <1,1,0> , <0,1,1>: <";
+    answer = saxpy(v1,v2,5.9);
+    for(double thing : answer){
+        std::cout<<thing<<",";
+    }
+    std::cout<<">\n\n";
+    v2 = {1,2,3};
+    std::vector<std::vector<double>> matrix = {{1,2,3},{5,10,20},{1,1,1}};
+    std::cout <<"Ax with A = {{1,2,3},{5,10,20},{1,1,1}} , x = {1,2,3}: <";
+    answer = matTimesVector(matrix,v2);
+    for(double thing : answer){
+        std::cout<<thing<<",";
+    }
+    std::cout<<">\n\n";
+    #pragma omp parallel
+    {
+        std::cout <<"Hello World... from thread: "<<omp_get_thread_num()<<std::endl;
+    }
 
     return 0;
 }

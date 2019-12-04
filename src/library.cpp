@@ -1,8 +1,13 @@
+#pragma clang diagnostic push
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "modernize-loop-convert"
+#pragma ide diagnostic ignored "openmp-use-default-none"
 #include "library.hpp"
 #include <iostream>
 #include <cmath>
 #include <cfloat>
 #include <vector>
+#include <omp.h>
 
 double absError(double computed, double actual){
     return std::abs(actual - computed);
@@ -444,6 +449,19 @@ std::vector<double> crossProduct(const std::vector<double>& v1, const std::vecto
     std::vector<double> answer;
     for(unsigned int i =0; i < v1.size();++i){
         answer.push_back(v1[(i+1)%size]*v2[(i+2)%size]-v1[(i+2)%size]*v2[(i+1)%size]);
+    }
+    return answer;
+}
+std::vector<double> saxpy(const std::vector<double>& v1, const std::vector<double>& v2, double scale){ //really daxpy
+    return vectorAdd(vectorScale(v1,scale),v2);
+}
+std::vector<double> matTimesVector(const std::vector<std::vector<double>>& matrix, const std::vector<double>& v){
+    if (matrix[0].size()!=v.size()){ return std::vector<double>{0};}
+    std::vector<double> answer;
+    answer.reserve(matrix.size());
+#pragma omp parallel for
+    for(unsigned int i =0; i < matrix.size();++i){
+        answer.push_back(dotProduct(matrix[i],v));
     }
     return answer;
 }
