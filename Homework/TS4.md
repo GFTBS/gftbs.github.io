@@ -52,6 +52,13 @@ output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):
     Ax of A = {{1,2,3},{5,10,20},{1,1,1}} , x = {1,2,3}: <14,85,6,>
 
 #### Task 8: Download and use the "Hello World" handout that uses OpenMP to do a single print of a string for each processor your computer has. Report how many processors your laptop or desktop has.  
+My laptop has 4 processors
+output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp): 
+
+    Hello World... from thread: Hello World... from thread: 21
+
+    Hello World... from thread: Hello World... from thread: 0
+    3
 
 #### Task 9: Use OpenMP to try to speed up the matrix-vector multiplication using more than one processor.  
 
