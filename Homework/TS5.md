@@ -2,6 +2,8 @@
 [Manual](https://gftbs.github.io/Software_Manual/toc)  
 output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
 
+    Diagonal solve of \{\{1,0,0\},\{0,1.21,0\},\{0,0,5442.5899\}\}: <1,1.21,5442.59,>
+
 #### Task 2: Write a method/routine that will compute the solution of an upper triangular system (the coefficient matrix is upper triangular) and put an entry in your software manual to document the routine.  
 
 #### Task 3: Repeat the previous task, but in the case of a lower triangular coefficient matrix.  
