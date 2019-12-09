@@ -38,4 +38,11 @@ std::vector<double> crossProduct(const std::vector<double>& v1, const std::vecto
 std::vector<double> saxpy(const std::vector<double>& v1, const std::vector<double>& v2, double scale);
 std::vector<double> matTimesVector(const std::vector<std::vector<double>>& matrix, const std::vector<double>& v);
 
+// Matrix Math
+void printVec(const std::vector<double>& vector);
+void printMat(const std::vector<std::vector<double>>& matrix);
+std::vector<double> diagMatSolve(const std::vector<std::vector<double>>& diagMatrix);
+std::vector<double> upperTMatSolve(const std::vector<std::vector<double>>& matrix);
+std::vector<double> lowerTMatSolve(const std::vector<std::vector<double>>& matrix);
+
 #endif //MATH4610_LIBRARY_HPP

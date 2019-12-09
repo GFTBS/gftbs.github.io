@@ -9,10 +9,10 @@
 #include <vector>
 #include <omp.h>
 
+// Basic routines
 double absError(double computed, double actual){
     return std::abs(actual - computed);
 }
-
 int doublePrecision(int maxPrecision){  //used to check machine precision on the central difference form of f(x) = e^x at x = pi answer should be e^pi.
     double pi = M_PI;
     double e = M_E;
@@ -35,12 +35,9 @@ int doublePrecision(int maxPrecision){  //used to check machine precision on the
     //std::cout<<"Double Error: "<< error<<std::endl;
     return precision;
 }
-
-
 double relError(double computed, double actual){
     return std::abs((actual - computed)/ actual);
 }
-
 int singlePrecision(int maxPrecision){  //used to check machine precision on the central difference form of f(x) = e^x at x = pi answer should be e^pi.
     float pi = M_PI;
     float e = M_E;
@@ -63,7 +60,7 @@ int singlePrecision(int maxPrecision){  //used to check machine precision on the
     return precision;
 }
 //x≈1.096327788292240187224006868725774624523189807363408824495262094888955008877488472442044026351833693544073747220676874491102970453662676747971345332569704084553 from wolfram
-
+// Root Finding
 double fixedPointIteration(double start, int maxiters){ // x cosh(x)+x^3=π
     auto pChange = DBL_MAX;
     auto cChange =DBL_MAX;
@@ -125,7 +122,6 @@ double newtonsRoot(double start, int maxiters){ // x cosh(x)+x^3=π
     }
     return x;
 }
-
 double secantRoot(double start, int maxiters){ // x cosh(x)+x^3=π
     auto pChange = DBL_MAX;
     auto cChange =DBL_MAX;
@@ -145,7 +141,6 @@ double secantRoot(double start, int maxiters){ // x cosh(x)+x^3=π
     }
     return x;
 }
-
 double mixedNewtRoot(double low, double high, int maxiters){ // x cosh(x)+x^3=π
     int machinePrecision = doublePrecision(100);
     auto fx = [&](double x){
@@ -465,3 +460,109 @@ std::vector<double> matTimesVector(const std::vector<std::vector<double>>& matri
     }
     return answer;
 }
+
+//Matrix Math
+void printMat(const std::vector<std::vector<double>>& matrix){
+    std::cout<<"\n[ ";
+    for(unsigned int i =0; i <matrix.size();++i){
+        for(unsigned int j =0; j <matrix[i].size();++j) {
+            std::cout<<matrix[i][j]<<" ";
+        }
+        if(i < matrix.size()-1) {
+            std::cout << "]\n[ ";
+        }else{
+            std::cout<<"]\n";
+        }
+    }
+}
+void printVec(const std::vector<double>& vector){
+    std::cout<<"\n[ ";
+    for(double thing : vector){
+        std::cout << thing <<" ";
+    }
+    std::cout<<"]\n";
+}
+std::vector<double> diagMatSolve(const std::vector<std::vector<double>>& diagMatrix){
+    std::vector<double> answer;
+    for(unsigned int i =0; i < diagMatrix.size();++i){
+        answer.push_back(diagMatrix[i][diagMatrix[i].size()-1]/diagMatrix[i][i]);
+    }
+    return answer;
+}
+std::vector<double> upperTMatSolve(const std::vector<std::vector<double>>& matrix){
+    std::vector<std::vector<double>> answer = matrix;
+    for(unsigned int i =0; i < answer.size()-1;++i){
+        for(unsigned int j =i+1; j < answer[i].size()-1;++j){
+            if(answer[j][j]==0){break;}
+            if(answer[i][j]==0){break;}
+            double ratio = answer[i][j]/answer[j][j];
+            for(unsigned int k =j;k<answer[i].size();++k){
+                answer[i][k] = answer[i][k] - ratio*answer[j][k];
+            }
+        }
+
+    }
+    return diagMatSolve(answer);
+}
+std::vector<double> lowerTMatSolve(const std::vector<std::vector<double>>& matrix){
+    std::vector<std::vector<double>> answer = matrix;
+    for(int i =answer.size()-1; i > 0;--i){
+        for(int j =i-1; j >= 0;--j){
+            if(answer[j][j]==0){break;}
+            if(answer[i][j]==0){break;}
+            double ratio = answer[i][j]/answer[j][j];
+            for(int k =j;k>=0;--k){
+                answer[i][k] = answer[i][k] - ratio*answer[j][k];
+            }
+            answer[i][answer[i].size()-1] -= ratio*answer[j][answer[j].size()-1];
+        }
+    }
+    return diagMatSolve(answer);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
