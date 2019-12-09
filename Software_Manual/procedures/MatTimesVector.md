@@ -14,8 +14,8 @@
 
 **Usage/Example:**  
 
-    std::vector<double> v2 = {1,2,3};
-    std::vector<std::vector<double>> matrix = {{1,2,3},{5,10,20},{1,1,1}};
+    std::vector<double> v2 = \{1,2,3\};
+    std::vector<std::vector<double>> matrix = \{\{1,2,3\},\{5,10,20\},\{1,1,1\}\};
     answer = matTimesVector(matrix,v2);  
     
 Output from the lines above:

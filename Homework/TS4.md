@@ -49,7 +49,7 @@ output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp):
 [Manual](https://gftbs.github.io/Software_Manual/toc)  
 output of [TS4Demo](https://gftbs.github.io/src/TS4Demo.cpp): 
 
-    Ax of A = {{1,2,3},{5,10,20},{1,1,1}} , x = {1,2,3}: <14,85,6,>
+    Ax of A = \{\{1,2,3\},\{5,10,20\},\{1,1,1\}\} , x = \{1,2,3\}: <14,85,6,>
 
 #### Task 8: Download and use the "Hello World" handout that uses OpenMP to do a single print of a string for each processor your computer has. Report how many processors your laptop or desktop has.  
 My laptop has 4 processors
