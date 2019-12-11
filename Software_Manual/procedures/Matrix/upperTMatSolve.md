@@ -14,7 +14,7 @@
 
 **Usage/Example:**  
 
-    matrix = {{1,1,1,20},{0,1.21,5,20},{0,0,7,20}};
+    matrix = {\{1,1,1,20},{0,1.21,5,20},{0,0,7,20}\};
     std::cout<<"Upper Triangular solve of";
     printMat(matrix);
     answer = upperTMatSolve(matrix);
