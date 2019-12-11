@@ -14,7 +14,7 @@
 
 **Usage/Example:**  
 
-    matrix = {{7,0,0,20},{5,1.21,0,20},{1,1,1,20}};
+    matrix = {\{7,0,0,20},{5,1.21,0,20},{1,1,1,20}\};
     std::cout<<"Lower Triangular solve of";
     printMat(matrix);
     answer = lowerTMatSolve(matrix);
