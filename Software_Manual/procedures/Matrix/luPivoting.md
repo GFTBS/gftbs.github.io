@@ -14,7 +14,7 @@
 
 **Usage/Example:**  
 
-    matrix = {{3,5,3,4},{4,3,-1,6},{1,1,1,1}};
+    matrix = {\{3,5,3,4},{4,3,-1,6},{1,1,1,1}\};
     std::cout<<"LU Pivoting Solution of";
     printMat(matrix);
     std::vector<unsigned int> indices;
