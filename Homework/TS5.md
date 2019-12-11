@@ -33,6 +33,17 @@ output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):
     [ 2.85714 4.72255 12.4203 ]
 
 #### Task 4: Write a routine that will row reduce a square matrix into row echelon form. Include a page in your software manual.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
+
+    REF of
+    [ 7 1 1 20 ]
+    [ 5 1.21 1 20 ]
+    [ 1 1 1 20 ]
+
+    [ 7 1 1 20 ]
+    [ 0 0.495714 0.285714 5.71429 ]
+    [ 0 0 0.363112 7.26225 ]
 
 #### Task 5: Write a code that will solve a square linaer system of equations using Gaussian elimination (elementary row operations). Use your backsubstitution method to compute the solution. Note that the first part will result in an upper triangular system. Document the code in your software manual.  
 
