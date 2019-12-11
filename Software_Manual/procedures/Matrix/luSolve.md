@@ -14,7 +14,7 @@
 
 **Usage/Example:**  
 
-    matrix = {{1,1,1,1},{4,3,-1,6},{3,5,3,4}};
+    matrix = {\{1,1,1,1},{4,3,-1,6},{3,5,3,4}\};
     std::cout<<"LU Solution of";
     printMat(matrix);
     answer = luSolve(matrix);
