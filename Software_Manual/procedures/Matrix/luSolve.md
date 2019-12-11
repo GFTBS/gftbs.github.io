@@ -33,7 +33,7 @@ Output from the lines above:
 
 **Implementation/Code:** The following is the code for luSolve(std::vector<std::vector<double>> matrix)
 
-std::vector<double> luSolve(std::vector<std::vector<double>> matrix){
-    luFactorization(matrix);
-    return upperTMatSolve(matrix);
-}
+    std::vector<double> luSolve(std::vector<std::vector<double>> matrix){
+        luFactorization(matrix);
+        return upperTMatSolve(matrix);
+    }
