@@ -14,7 +14,7 @@
 
 **Usage/Example:**  
 
-    std::vector<std::vector<double>> matrix = {{1,0,0,20},{0,1.21,0,20},{0,0,5442.5899,20}};
+    std::vector<std::vector<double>> matrix = {\{1,0,0,20},{0,1.21,0,20},{0,0,5442.5899,20}\};
     std::vector<double> answer;
     std::cout<<"Diagonal solve of";
     printMat(matrix);
