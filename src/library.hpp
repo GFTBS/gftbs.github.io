@@ -44,5 +44,8 @@ void printMat(const std::vector<std::vector<double>>& matrix);
 std::vector<double> diagMatSolve(const std::vector<std::vector<double>>& diagMatrix);
 std::vector<double> upperTMatSolve(const std::vector<std::vector<double>>& matrix);
 std::vector<double> lowerTMatSolve(const std::vector<std::vector<double>>& matrix);
+void refMat(std::vector<std::vector<double>>& matrix);
+std::vector<double> gaussianSolve(std::vector<std::vector<double>>& matrix);
+void luFactorization(std::vector<std::vector<double>>& matrix);
 
 #endif //MATH4610_LIBRARY_HPP

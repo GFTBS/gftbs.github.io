@@ -519,9 +519,44 @@ std::vector<double> lowerTMatSolve(const std::vector<std::vector<double>>& matri
     }
     return diagMatSolve(answer);
 }
-
-
-
+void refMat(std::vector<std::vector<double>>& matrix){
+    for(unsigned int i=1;i<matrix.size();++i){
+        for(unsigned int j=i;j<matrix.size();++j){
+            if(matrix[j][i-1]==0){break;}
+            if(matrix[i-1][i-1]==0){break;}
+            double ratio = matrix[j][i-1]/matrix[i-1][i-1];
+            for(unsigned int k = 0;k<matrix[j].size();++k){
+                matrix[j][k]= matrix[j][k] - ratio*matrix[i-1][k];
+            }
+        }
+    }
+}
+std::vector<double> gaussianSolve(std::vector<std::vector<double>>& matrix){
+    refMat(matrix);
+    return upperTMatSolve(matrix);
+}
+void luFactorization(std::vector<std::vector<double>>& matrix){
+    //Lower matrix is where the zeros should be in the upper matrix. Diagonals of the lower matrix are assumed to be one
+    std::vector<double> uCoefficients;
+    for(unsigned int i=1;i<matrix.size();++i){
+        for(unsigned int j=i;j<matrix.size();++j){
+            if(matrix[j][i-1]==0){uCoefficients.push_back(0); break;}
+            if(matrix[i-1][i-1]==0){uCoefficients.push_back(0); break;}
+            double ratio = matrix[j][i-1]/matrix[i-1][i-1];
+            uCoefficients.push_back(ratio);
+            for(unsigned int k = 0;k<matrix[j].size();++k){
+                matrix[j][k]= matrix[j][k] - ratio*matrix[i-1][k];
+            }
+        }
+    }
+    int k =0;
+    for(unsigned int i=1;i<matrix.size();++i) {
+        for (unsigned int j = 0; j < i; ++j) {
+            matrix[i][j]=uCoefficients[k];
+            k++;
+        }
+    }
+}
 
 
 

@@ -28,5 +28,26 @@ int main(){
     printVec(answer);
     std::cout<<"\n";
 
+    matrix = {{7,1,1,20},{5,1.21,1,20},{1,1,1,20}};
+    std::cout<<"REF of";
+    printMat(matrix);
+    refMat(matrix);
+    printMat(matrix);
+    std::cout<<"\n";
+
+    matrix = {{7,1,1,20},{5,1.21,1,20},{1,1,1,20}};
+    std::cout<<"Solution of";
+    printMat(matrix);
+    answer=gaussianSolve(matrix);
+    printVec(answer);
+    std::cout<<"\n";
+
+    matrix = {{1,1,1,1},{4,3,-1,6},{3,5,3,4}};
+    std::cout<<"LU of";
+    printMat(matrix);
+    luFactorization(matrix);
+    printMat(matrix);
+    std::cout<<"\n";
+
     return 0;
 }
