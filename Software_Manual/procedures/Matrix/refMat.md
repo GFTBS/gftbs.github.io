@@ -14,7 +14,7 @@
 
 **Usage/Example:**  
 
-    matrix = {{7,1,1,20},{5,1.21,1,20},{1,1,1,20}};
+    matrix = {\{7,1,1,20},{5,1.21,1,20},{1,1,1,20}\};
     std::cout<<"REF of";
     printMat(matrix);
     refMat(matrix);
