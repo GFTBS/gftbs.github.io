@@ -46,6 +46,15 @@ output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):
     [ 0 0 0.363112 7.26225 ]
 
 #### Task 5: Write a code that will solve a square linaer system of equations using Gaussian elimination (elementary row operations). Use your backsubstitution method to compute the solution. Note that the first part will result in an upper triangular system. Document the code in your software manual.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
+
+Solution of
+[ 7 1 1 20 ]
+[ 5 1.21 1 20 ]
+[ 1 1 1 20 ]
+
+[ 0 0 20 ]
 
 #### Task 6: Write a routine that will compute the LU-factorization of a square matrix. Put an entry in your software manual to document the code.  
 
