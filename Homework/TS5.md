@@ -83,6 +83,8 @@ output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):
     [ 1 0.5 -0.5 ]
 
 #### Task 8: Using OpenMP, see if you can speed up the LU-factorization solution method from the previous task.  
+It's parallel, may not be faster.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)   
 
 #### Task 9: Embed scaled partial pivoting in a new version of the LU-factorization linear solution method. using more than one processor. Do this without interchanging rows - use an index vector to improve efficiency.  
 
