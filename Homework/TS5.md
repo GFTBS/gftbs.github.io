@@ -57,6 +57,19 @@ Solution of
 [ 0 0 20 ]
 
 #### Task 6: Write a routine that will compute the LU-factorization of a square matrix. Put an entry in your software manual to document the code.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+##### Note: L and U are contained in the same matrix. L has 1 diagonals, and the lower values. U has the diagonals and the upper values.  
+output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
+
+
+    LU of
+    [ 1 1 1 1 ]
+    [ 4 3 -1 6 ]
+    [ 3 5 3 4 ]
+
+    [ 1 1 1 1 ]
+    [ 4 -1 -5 2 ]
+    [ 3 -2 -10 5 ]
 
 #### Task 7: Create a routine that will solve a linear system of equations using the LU-factorization. Make sure you include a page in your software manual.  
 
