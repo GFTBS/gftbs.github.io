@@ -72,6 +72,15 @@ output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):
     [ 3 -2 -10 5 ]
 
 #### Task 7: Create a routine that will solve a linear system of equations using the LU-factorization. Make sure you include a page in your software manual.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
+
+    LU Solution of
+    [ 1 1 1 1 ]
+    [ 4 3 -1 6 ]
+    [ 3 5 3 4 ]
+
+    [ 1 0.5 -0.5 ]
 
 #### Task 8: Using OpenMP, see if you can speed up the LU-factorization solution method from the previous task.  
 
