@@ -31,7 +31,8 @@ Use this table of contents to quickly find the routine you are looking for
 [absErrorOneNorm](https://gftbs.github.io/Software_Manual/procedures/absErrorOneNorm)  
 [relErrorOneNorm](https://gftbs.github.io/Software_Manual/procedures/relErrorOneNorm)  
 
-### Matrix Math
+### Matrix Math  
+##### TS5
 [Diagonal Matrix Solve](https://gftbs.github.io/Software_Manual/procedures/Matrix/diagMatSolve)  
 [Gaussian Solve](https://gftbs.github.io/Software_Manual/procedures/Matrix/gaussianSolve)  
 [lowerTMatSolve](https://gftbs.github.io/Software_Manual/procedures/Matrix/lowerTMatSolve)  
@@ -40,3 +41,12 @@ Use this table of contents to quickly find the routine you are looking for
 [luSolve](https://gftbs.github.io/Software_Manual/procedures/Matrix/luSolve)  
 [refMat](https://gftbs.github.io/Software_Manual/procedures/Matrix/refMat)  
 [upperTMatSolve](https://gftbs.github.io/Software_Manual/procedures/Matrix/upperTMatSolve)  
+##### TS6
+[Gauss-Seidel_Solve](https://gftbs.github.io/Software_Manual/procedures/ts6/GSSolve)  
+[choleskyFactor](https://gftbs.github.io/Software_Manual/procedures/ts6/choleskyFactor)  
+[genSquareDiagDominantMat](https://gftbs.github.io/Software_Manual/procedures/ts6/genSquareDiagDominantMat)  
+[genSymmetricDiagDominantMat](https://gftbs.github.io/Software_Manual/procedures/ts6/genSymmetricDiagDominantMat)  
+[genSymmetricMat](https://gftbs.github.io/Software_Manual/procedures/ts6/genSymmetricMat)  
+[jacobiSolve](https://gftbs.github.io/Software_Manual/procedures/ts6/jacobiSolve)  
+
+
