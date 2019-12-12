@@ -33,43 +33,43 @@ Output from the lines above:
 
 **Implementation/Code:** The following is the code for jacobiSolve(std::vector<std::vector<double>>& matrix, int maxIters)
 
-std::vector<double> jacobiSolve(std::vector<std::vector<double>>& matrix, int maxIters){
-    double accuracy = .0001;
-    std::vector<double> answer;
-    std::vector<double> pChange, cChange;
-    for(unsigned int i =0; i <matrix.size();++i){
-        answer.push_back(0);
-        pChange.push_back(DBL_MAX);
-        cChange.push_back(0);
-    }
-    for(unsigned int i =0; i <maxIters;++i){
+    std::vector<double> jacobiSolve(std::vector<std::vector<double>>& matrix, int maxIters){
+        double accuracy = .0001;
+        std::vector<double> answer;
+        std::vector<double> pChange, cChange;
+        for(unsigned int i =0; i <matrix.size();++i){
+            answer.push_back(0);
+            pChange.push_back(DBL_MAX);
+            cChange.push_back(0);
+        }
+        for(unsigned int i =0; i <maxIters;++i){
 
-        for(unsigned int j =0; j < matrix.size();++j){
-            double temp = 0;
-            for(unsigned int k =0; k <matrix[j].size();++k){
-                if(k ==j){}
-                else if(k==matrix[j].size()-1){
-                    temp +=matrix[j][k];
+            for(unsigned int j =0; j < matrix.size();++j){
+                double temp = 0;
+                for(unsigned int k =0; k <matrix[j].size();++k){
+                    if(k ==j){}
+                    else if(k==matrix[j].size()-1){
+                        temp +=matrix[j][k];
+                    }
+                    else{
+                        temp -= answer[k]*matrix[j][k];
+                    }
                 }
-                else{
-                    temp -= answer[k]*matrix[j][k];
-                }
+                temp = temp/matrix[j][j];
+                cChange[j] = std::abs(answer[j]-temp);
+                answer[j]=temp;
             }
-            temp = temp/matrix[j][j];
-            cChange[j] = std::abs(answer[j]-temp);
-            answer[j]=temp;
+            for(unsigned int j =0;j<answer.size();++j){
+                if(cChange[j]>pChange[j]){ return answer;}
+            }
+            for(unsigned int j =0;j<answer.size();++j){
+                if(cChange[j]>accuracy){ break;}
+                if(j==answer.size()-1){ return answer;}
+            }
+            pChange = cChange;
+            //std::cout<<i<<"\n"; // use this to count iterations
+            //printVec(answer);
         }
-        for(unsigned int j =0;j<answer.size();++j){
-            if(cChange[j]>pChange[j]){ return answer;}
-        }
-        for(unsigned int j =0;j<answer.size();++j){
-            if(cChange[j]>accuracy){ break;}
-            if(j==answer.size()-1){ return answer;}
-        }
-        pChange = cChange;
-        //std::cout<<i<<"\n"; // use this to count iterations
-        //printVec(answer);
-    }
 
-    return answer;
-}
+        return answer;
+    }
