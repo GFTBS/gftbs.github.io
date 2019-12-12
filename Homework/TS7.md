@@ -17,3 +17,6 @@
 #### Task 9: Create an analogous routine where the matrix is penta-diagonal with two diagonals above and below the main diagonal of the matrix. Use 5 vectors to store the matrix. As always, document the method in your software manual.
 
 #### Task 10: Search the internet for sites that document the use of conjugate gradient methods. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
+https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf  
+  
+This document claims conjugate gradient methods are the most prominent iterative method for solving sparse systems of linear equations. Steepest descent is a greedy method that calculates the steepest direction to move and moves in that direction. It does discuss local minimum and how they can add error or extra iterations to a method.  
