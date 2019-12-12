@@ -34,6 +34,15 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
     [ 6.13567 1.07045 3.58257 7.5661 7.3216 ]
 
 #### Task 4: Repeat Task 3 with output that is diagonally dominant as defined in class.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp): 
+
+    random square diagonally dominant matrix low: 1.0, high: 10.0, Size:5
+    [ 31.0015 9.23805 6.34892 5.63822 9.77634 ]
+    [ 6.95405 20.686 8.09644 1.66691 3.96865 ]
+    [ 6.25369 1.27875 16.7246 1.17777 8.01435 ]
+    [ 4.0244 4.08273 4.73338 19.7038 6.86332 ]
+    [ 6.13567 1.07045 3.58257 7.5661 18.3548 ]
 
 #### Task 5: Repeat Task 3 with output that is a symmetric matrix.  
 
