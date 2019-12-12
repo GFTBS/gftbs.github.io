@@ -1,4 +1,15 @@
 #### Task 1: Write a code that implements a Cholesky factorization of a real matrix. Include a check on the matrix to make sure it is symmetric. Put an entry in your software manual that documents the method.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
+
+    Cholesky of
+    [ 4 12 -16 ]
+    [ 12 37 -43 ]
+    [ -16 -43 98 ]
+
+    [ 1 3 -4 ]
+    [ 3 1 5 ]
+    [ -4 5 1 ]
 
 #### Task 2: Write a method that implements Jacobi iteration for solving linear systems of equations. Put an entry in your software manual for this method.  
 
