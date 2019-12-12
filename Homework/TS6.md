@@ -24,7 +24,7 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
 
 #### Task 3: Write a routine that will create a square matrix with dimension n. Use a random number generator to determine the entries in the matrix. You can use a uniform distribution as the basis for the values created. Put a page in for this method.  
 [Manual](https://gftbs.github.io/Software_Manual/toc)  
-output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):   
 
     random square matrix low: 1.0, high: 10.0, Size:5
     [ 7.53624 9.23805 6.34892 5.63822 9.77634 ]
@@ -35,7 +35,7 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
 
 #### Task 4: Repeat Task 3 with output that is diagonally dominant as defined in class.  
 [Manual](https://gftbs.github.io/Software_Manual/toc)  
-output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp): 
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
 
     random square diagonally dominant matrix low: 1.0, high: 10.0, Size:5
     [ 31.0015 9.23805 6.34892 5.63822 9.77634 ]
@@ -45,6 +45,15 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
     [ 6.13567 1.07045 3.58257 7.5661 18.3548 ]
 
 #### Task 5: Repeat Task 3 with output that is a symmetric matrix.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
+
+    random square symmetric matrix low: 1.0, high: 10.0, Size:5
+    [ 7.53624 6.95405 6.25369 4.0244 6.13567 ]
+    [ 6.95405 5.75787 1.27875 4.08273 1.07045 ]
+    [ 6.25369 1.27875 9.35734 4.73338 3.58257 ]
+    [ 4.0244 4.08273 4.73338 9.16582 7.5661 ]
+    [ 6.13567 1.07045 3.58257 7.5661 7.3216 ]
 
 #### Task 6: Repeat Task 3 with output that is both symmetric and diagonally dominant. 
 
