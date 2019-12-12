@@ -82,6 +82,7 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
     [ 0 0 7 20 ]
 
     [ 12.4203 4.72255 2.85714 ]
+    
 #### Task 9: Run the Gauss-Seidel iteration on the same matrices as you created in Task 7. Compare the results of the Jacobi iteration runs to the Gauss-Seidel runs. This means keeping track of the number of iterations for each method.  
 The gauss-Seidel would converge to an answer in 5 iterations, where the jacobi iteration would converge in 13 iterations. The gauss-seidel produced closer to the expected answer.  
 output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
