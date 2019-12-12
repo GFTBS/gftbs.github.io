@@ -30,3 +30,13 @@ Use this table of contents to quickly find the routine you are looking for
 [absErrorInfNorm](https://gftbs.github.io/Software_Manual/procedures/absErrorInfNorm)  
 [absErrorOneNorm](https://gftbs.github.io/Software_Manual/procedures/absErrorOneNorm)  
 [relErrorOneNorm](https://gftbs.github.io/Software_Manual/procedures/relErrorOneNorm)  
+
+### Matrix Math
+[Diagonal Matrix Solve](https://gftbs.github.io/Software_Manual/procedures/Matrix/diagMatSolve)  
+[Gaussian Solve](https://gftbs.github.io/Software_Manual/procedures/Matrix/gaussianSolve)  
+[lowerTMatSolve](https://gftbs.github.io/Software_Manual/procedures/Matrix/lowerTMatSolve)  
+[luFactorization](https://gftbs.github.io/Software_Manual/procedures/Matrix/luFactorization)  
+[luPivoting](https://gftbs.github.io/Software_Manual/procedures/Matrix/luPivoting)  
+[luSolve](https://gftbs.github.io/Software_Manual/procedures/Matrix/luSolve)  
+[refMat](https://gftbs.github.io/Software_Manual/procedures/Matrix/refMat)  
+[upperTMatSolve](https://gftbs.github.io/Software_Manual/procedures/Matrix/upperTMatSolve)  

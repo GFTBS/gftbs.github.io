@@ -72,9 +72,34 @@ output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):
     [ 3 -2 -10 5 ]
 
 #### Task 7: Create a routine that will solve a linear system of equations using the LU-factorization. Make sure you include a page in your software manual.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
+
+    LU Solution of
+    [ 1 1 1 1 ]
+    [ 4 3 -1 6 ]
+    [ 3 5 3 4 ]
+
+    [ 1 0.5 -0.5 ]
 
 #### Task 8: Using OpenMP, see if you can speed up the LU-factorization solution method from the previous task.  
+It's parallel, may not be faster.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)   
 
 #### Task 9: Embed scaled partial pivoting in a new version of the LU-factorization linear solution method. using more than one processor. Do this without interchanging rows - use an index vector to improve efficiency.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+##### The index vector is needed to read the matrix properly after using luPivoting
+output of [TS4Demo](https://gftbs.github.io/src/TS5Demo.cpp):  
+
+    LU Pivoting Solution of
+    [ 3 5 3 4 ]
+    [ 4 3 -1 6 ]
+    [ 1 1 1 1 ]
+    Index Vector
+    [ 2 1 0 ]
+    Solution Vector
+    [ 1 0.5 -0.5 ]
 
 #### Task 10: Search the internet for sites that document pivoting strategies in numerical solution of linear equations. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.  
+https://www3.nd.edu/~zxu2/acms40390F11/sec6-2.pdf  
+This site explains the need for pivoting strategies; round off errors forcing numbers to 0 when they should be really small. This happens a lot in matrices because large variations in number sizes. This site discussed many pivoting strategies and their particular uses. The next strategy to employ seems to be scaled partial pivoting.
