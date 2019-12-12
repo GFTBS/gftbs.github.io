@@ -52,5 +52,11 @@ std::vector<double> luSolve(std::vector<std::vector<double>> matrix);
 std::vector<double> luPivoting(std::vector<std::vector<double>>& matrix, std::vector<unsigned int>& indices);
 //TS6
 void choleskyFactor(std::vector<std::vector<double>>& matrix);
+std::vector<double> jacobiSolve(std::vector<std::vector<double>>& matrix, int maxIters);
+std::vector<std::vector<double>> genSquareMat(double low, double high, int size);
+std::vector<std::vector<double>> genSquareDiagDominantMat(double low, double high, int size);
+std::vector<std::vector<double>> genSymmetricMat(double low, double high, int size);
+std::vector<std::vector<double>> genSymmetricDiagDominantMat(double low, double high, int size);
+std::vector<double> gaussSeidelSolve(std::vector<std::vector<double>>& matrix, int maxIters);
 
 #endif //MATH4610_LIBRARY_HPP

@@ -8,6 +8,7 @@
 #include <cfloat>
 #include <vector>
 #include <omp.h>
+#include <random>
 
 // Basic routines
 double absError(double computed, double actual){
@@ -673,7 +674,136 @@ void choleskyFactor(std::vector<std::vector<double>>& matrix){
     }
 
 }
+std::vector<double> jacobiSolve(std::vector<std::vector<double>>& matrix, int maxIters){
+    double accuracy = .0001;
+    std::vector<double> answer;
+    std::vector<double> pChange, cChange;
+    for(unsigned int i =0; i <matrix.size();++i){
+        answer.push_back(0);
+        pChange.push_back(DBL_MAX);
+        cChange.push_back(0);
+    }
+    for(unsigned int i =0; i <maxIters;++i){
 
+        for(unsigned int j =0; j < matrix.size();++j){
+            double temp = 0;
+            for(unsigned int k =0; k <matrix[j].size();++k){
+                if(k ==j){}
+                else if(k==matrix[j].size()-1){
+                    temp +=matrix[j][k];
+                }
+                else{
+                    temp -= answer[k]*matrix[j][k];
+                }
+            }
+            temp = temp/matrix[j][j];
+            cChange[j] = std::abs(answer[j]-temp);
+            answer[j]=temp;
+        }
+        for(unsigned int j =0;j<answer.size();++j){
+            if(cChange[j]>pChange[j]){ return answer;}
+        }
+        for(unsigned int j =0;j<answer.size();++j){
+            if(cChange[j]>accuracy){ break;}
+            if(j==answer.size()-1){ return answer;}
+        }
+        pChange = cChange;
+        //std::cout<<i<<"\n"; // use this to count iterations
+        //printVec(answer);
+    }
+
+    return answer;
+}
+std::vector<std::vector<double>> genSquareMat(double low, double high, int size){
+    std::vector<std::vector<double>> matrix;
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> dis(low, high);
+    for(int i =0; i <size;i++){
+        std::vector<double> row;
+        row.reserve(size);
+        for (int j = 0; j < size; ++j) {
+            row.push_back(dis(gen));
+        }
+        matrix.push_back(row);
+    }
+    return matrix;
+}
+std::vector<std::vector<double>> genSquareDiagDominantMat(double low, double high, int size){
+    auto matrix = genSquareMat(low, high, size);
+    for(unsigned int i =0; i <matrix.size();i++){
+        double rowtotal = std::abs(matrix[i][i])*-2;
+        for(auto thing : matrix[i]){
+            rowtotal += std::abs(thing);
+        }
+        if(rowtotal>0){
+            matrix[i][i] += rowtotal;
+        }
+    }
+    return matrix;
+}
+std::vector<std::vector<double>> genSymmetricMat(double low, double high, int size){
+    auto matrix = genSquareMat(low,high,size);
+    for(int i =0; i <size;i++){
+        for (int j = i; j <size; ++j) {
+            matrix[i][j] = matrix[j][i];
+        }
+    }
+    return matrix;
+}
+std::vector<std::vector<double>> genSymmetricDiagDominantMat(double low, double high, int size){
+    auto matrix = genSquareDiagDominantMat(low,high,size);
+    for(int i =0; i <size;i++){
+        for (int j = i; j <size; ++j) {
+            matrix[i][j] = matrix[j][i];
+        }
+    }
+    return matrix;
+}
+std::vector<double> gaussSeidelSolve(std::vector<std::vector<double>>& matrix, int maxIters){
+    double accuracy = .0001;
+    std::vector<double> answer, oldAnswer;
+    std::vector<double> pChange, cChange;
+    for(unsigned int i =0; i <matrix.size();++i){
+        answer.push_back(0);
+        pChange.push_back(DBL_MAX);
+        cChange.push_back(0);
+        oldAnswer.push_back(0);
+    }
+    for(unsigned int i =0; i <maxIters;++i){
+
+        for(unsigned int j =0; j < matrix.size();++j){
+            double temp = 0;
+            for(unsigned int k =0; k <matrix[j].size();++k){
+                if(k==matrix[j].size()-1){
+                    temp +=matrix[j][k];
+                }
+                else if(k<j){
+                    temp -= answer[k]*matrix[j][k];
+                }
+                else if(k>j){
+                    temp -= oldAnswer[k]*matrix[j][k];
+                }
+            }
+            temp = temp/matrix[j][j];
+            cChange[j] = std::abs(answer[j]-temp);
+            oldAnswer[j]=answer[j];
+            answer[j]=temp;
+        }/*
+        for(unsigned int j =0;j<answer.size();++j){
+            if(cChange[j]>pChange[j]){ return answer;}
+        }
+        for(unsigned int j =0;j<answer.size();++j){
+            if(cChange[j]>accuracy){ break;}
+            if(j==answer.size()-1){ return answer;}
+        }*/
+        pChange = cChange;
+        //std::cout<<i<<"\n"; // use this to count iterations
+        //printVec(answer);
+    }
+
+    return answer;
+}
 
 
 
