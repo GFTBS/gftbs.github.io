@@ -90,3 +90,5 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
     [ 0.00822163 0.890495 1.28818 2.30332 0.998445 ]
 
 #### Task 10: Search the internet for sites that document the use of Jacobi iteration and/or Gauss-Seidel. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.  
+https://www.sciencedirect.com/topics/engineering/gauss-seidel-method#:~:targetText=The%20difference%20between%20the%20Gauss,as%20demonstrated%20in%20Table%207.2.  
+The Gauss-Seidel method seems to just be an updated method of the jacobian method. There seems to be no reason not to use the Gauss-Seidel method because it is the jacobian method, it just updates the values faster. The Gauss-Seidel method should converge faster because it updates it's values faster. 
