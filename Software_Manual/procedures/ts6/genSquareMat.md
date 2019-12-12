@@ -5,7 +5,7 @@
 
 **Language:** C++ Compiles with cMake as designated in CMakeLists.txt
 
-**Description/Purpose:** This routine will compute the answer to a system of equations using the Gauss-Seidel iteration method
+**Description/Purpose:** This routine will Generate a square matrix
 
 **Input:** double low, double high, int size
 
