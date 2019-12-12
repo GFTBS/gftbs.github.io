@@ -67,9 +67,21 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
     [ 6.13567 1.07045 3.58257 7.5661 18.3548 ]
 
 #### Task 7: Use each of the matrix generation routines with your Jacobi iteration to test the code. You should generate a matrix with dimension n with n large, create the right hand side of the system by multiplying the matrix on the left into a vector of ones. Then solve the resulting system. You solutions should be close to 1 if your Jacobi iteration is working.  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
 
-#### Task 8: Implement the Gauss-Seidel method for solving linear systems of equations. Include a software manual page for this method.  
+    Task 7
+    [ 0.0507803 0.640868 1.50742 2.30934 0.953503 ]
 
+#### Task 8: Implement the Gauss-Seidel method for solving linear systems of equations. Include a software manual page for this method. 
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
+
+    Gauss-Seidel Solution of
+    [ 1 1 1 20 ]
+    [ 0 1.21 5 20 ]
+    [ 0 0 7 20 ]
+
+    [ 12.4203 4.72255 2.85714 ]
 #### Task 9: Run the Gauss-Seidel iteration on the same matrices as you created in Task 7. Compare the results of the Jacobi iteration runs to the Gauss-Seidel runs. This means keeping track of the number of iterations for each method.  
 
 #### Task 10: Search the internet for sites that document the use of Jacobi iteration and/or Gauss-Seidel. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.  
