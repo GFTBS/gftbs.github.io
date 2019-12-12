@@ -49,5 +49,23 @@ int main(){
     printMat(matrix);
     std::cout<<"\n";
 
+    matrix = {{1,1,1,1},{4,3,-1,6},{3,5,3,4}};
+    std::cout<<"LU Solution of";
+    printMat(matrix);
+    answer = luSolve(matrix);
+    printVec(answer);
+    std::cout<<"\n";
+
+    matrix = {{3,5,3,4},{4,3,-1,6},{1,1,1,1}};
+    std::cout<<"LU Pivoting Solution of";
+    printMat(matrix);
+    std::vector<unsigned int> indices;
+    answer = luPivoting(matrix, indices);
+    std::cout <<"Index Vector";
+    printVec(indices);
+    std::cout <<"Solution Vector";
+    printVec(answer);
+    std::cout<<"\n";
+
     return 0;
 }

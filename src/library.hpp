@@ -40,6 +40,7 @@ std::vector<double> matTimesVector(const std::vector<std::vector<double>>& matri
 
 // Matrix Math
 void printVec(const std::vector<double>& vector);
+void printVec(const std::vector<unsigned int>& vector);
 void printMat(const std::vector<std::vector<double>>& matrix);
 std::vector<double> diagMatSolve(const std::vector<std::vector<double>>& diagMatrix);
 std::vector<double> upperTMatSolve(const std::vector<std::vector<double>>& matrix);
@@ -47,5 +48,9 @@ std::vector<double> lowerTMatSolve(const std::vector<std::vector<double>>& matri
 void refMat(std::vector<std::vector<double>>& matrix);
 std::vector<double> gaussianSolve(std::vector<std::vector<double>>& matrix);
 void luFactorization(std::vector<std::vector<double>>& matrix);
+std::vector<double> luSolve(std::vector<std::vector<double>> matrix);
+std::vector<double> luPivoting(std::vector<std::vector<double>>& matrix, std::vector<unsigned int>& indices);
+//TS6
+void choleskyFactor(std::vector<std::vector<double>>& matrix);
 
 #endif //MATH4610_LIBRARY_HPP

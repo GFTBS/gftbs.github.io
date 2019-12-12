@@ -26,3 +26,6 @@ target_link_libraries(TS4_Demo ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/lib
 
 add_executable(TS5_Demo TS5Demo.cpp)
 target_link_libraries(TS5_Demo ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/libmath4610.dll)
+
+add_executable(TS6_Demo TS6Demo.cpp)
+target_link_libraries(TS6_Demo ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/libmath4610.dll)
