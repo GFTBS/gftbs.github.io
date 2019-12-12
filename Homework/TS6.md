@@ -12,6 +12,15 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
     [ -4 5 1 ]
 
 #### Task 2: Write a method that implements Jacobi iteration for solving linear systems of equations. Put an entry in your software manual for this method.  
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
+
+    Jacobi Solution of
+    [ 1 1 1 20 ]
+    [ 0 1.21 5 20 ]
+    [ 0 0 7 20 ]
+
+    [ 12.4203 4.72255 2.85714 ]
 
 #### Task 3: Write a routine that will create a square matrix with dimension n. Use a random number generator to determine the entries in the matrix. You can use a uniform distribution as the basis for the values created. Put a page in for this method.  
 
