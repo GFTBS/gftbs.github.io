@@ -56,6 +56,15 @@ output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):
     [ 6.13567 1.07045 3.58257 7.5661 7.3216 ]
 
 #### Task 6: Repeat Task 3 with output that is both symmetric and diagonally dominant. 
+[Manual](https://gftbs.github.io/Software_Manual/toc)  
+output of [TS6Demo](https://gftbs.github.io/src/TS6Demo.cpp):  
+
+    random square symmetric diagonally dominant matrix low: 1.0, high: 10.0, Size:5
+    [ 31.0015 6.95405 6.25369 4.0244 6.13567 ]
+    [ 6.95405 20.686 1.27875 4.08273 1.07045 ]
+    [ 6.25369 1.27875 16.7246 4.73338 3.58257 ]
+    [ 4.0244 4.08273 4.73338 19.7038 7.5661 ]
+    [ 6.13567 1.07045 3.58257 7.5661 18.3548 ]
 
 #### Task 7: Use each of the matrix generation routines with your Jacobi iteration to test the code. You should generate a matrix with dimension n with n large, create the right hand side of the system by multiplying the matrix on the left into a vector of ones. Then solve the resulting system. You solutions should be close to 1 if your Jacobi iteration is working.  
 
