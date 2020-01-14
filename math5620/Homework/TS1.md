@@ -1,5 +1,5 @@
 # Tasksheet 1  
-#### Task 1: Email th link to github page  
+#### Task 1: Email the link to github page  
 [Github Page](https://gftbs.github.io/math5620)  
   
 #### Task 2: Email to indicate math5620 repo is created
