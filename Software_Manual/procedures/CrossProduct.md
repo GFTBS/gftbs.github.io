@@ -25,12 +25,12 @@ Output from the lines above:
 
 **Implementation/Code:** The following is the code for crossProduct(const std::vector<double>& v1, const std::vector<double>& v2)
 
-std::vector<double> crossProduct(const std::vector<double>& v1, const std::vector<double>& v2){
-    if(v1.size()!=v2.size()){ return std::vector<double> {0};}
-    unsigned int size = v1.size();
-    std::vector<double> answer;
-    for(unsigned int i =0; i < v1.size();++i){
-        answer.push_back(v1[(i+1)%size]*v2[(i+2)%size]-v1[(i+2)%size]*v2[(i+1)%size]);
+    std::vector<double> crossProduct(const std::vector<double>& v1, const std::vector<double>& v2){
+        if(v1.size()!=v2.size()){ return std::vector<double> {0};}
+        unsigned int size = v1.size();
+        std::vector<double> answer;
+        for(unsigned int i =0; i < v1.size();++i){
+            answer.push_back(v1[(i+1)%size]*v2[(i+2)%size]-v1[(i+2)%size]*v2[(i+1)%size]);
+        }
+        return answer;
     }
-    return answer;
-}
