@@ -1,7 +1,7 @@
 # Task Sheet 2:  
 #### Task 1: Build a code that will initialize the tridiagonal matrix for the simple elliptic ordinary differential equation in the textbook. Use the array storage version of the matrix storage. Also implement the code that initializes the right hand side vector. Make the code reusable  
 
-#### Task 2: Implement an algorithm for solving the linear system in the book for the elliptic problem.  
+#### Task 2: Implement an algorithm for solving the linear system in the book for the elliptic problem. pg. 15, 16
 
 #### Task 3: Write up the results that you obtain in the approximate solution of the elliptic problem.  
 
