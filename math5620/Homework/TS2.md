@@ -5,12 +5,12 @@ Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)
 
     Tri diagonal Matrix 2, -1, 1 size = 10 (right hand side is contained in the matrix)
 
-    [ 2 1 0 0 0 0 0 ]
-    [ -1 2 1 0 0 0 0 ]
-    [ 0 -1 2 1 0 0 0 ]
-    [ 0 0 -1 2 1 0 0 ]
-    [ 0 0 0 -1 2 1 0 ]
-    [ 0 0 0 0 -1 2 0 ]
+    [ 2 1 0 0 0 0 1 ]
+    [ -1 2 1 0 0 0 2 ]
+    [ 0 -1 2 1 0 0 3 ]
+    [ 0 0 -1 2 1 0 4 ]
+    [ 0 0 0 -1 2 1 5 ]
+    [ 0 0 0 0 -1 2 6 ]
 
 #### Task 2: Implement an algorithm for solving the linear system in the book for the elliptic problem. pg. 15, 16
 
