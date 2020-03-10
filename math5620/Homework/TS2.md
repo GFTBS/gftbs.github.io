@@ -1,7 +1,7 @@
 # Task Sheet 2:  
 #### Task 1: Build a code that will initialize the tridiagonal matrix for the simple elliptic ordinary differential equation in the textbook. Use the array storage version of the matrix storage. Also implement the code that initializes the right hand side vector. Make the code reusable  
 
-Output from TS2Demo
+Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)
 
     Tri diagonal Matrix 2, -1, 1 size = 10 (right hand side is contained in the matrix)
 
