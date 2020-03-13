@@ -5,3 +5,5 @@ cmake_install.cmake
 Makefile
 src/.idea/
 src/cmake-build-debug/
+math5620/src/.idea/
+math5620/src/cmake-build-debug/

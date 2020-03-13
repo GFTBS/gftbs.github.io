@@ -4,7 +4,7 @@
 #include <vector>
 
 // Matrix Functions
-std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, int size);
+std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, int size, std::vector<double> rhs);
 
 
 

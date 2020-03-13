@@ -13,15 +13,18 @@
 // Matrix Functions
 
 // Generates a size x size + 1 tri diag matrix where a is the center, b is the left, and c is the right diagonal.
-std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, int size){
+std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, int size, std::vector<double> rhs){
     std::vector<std::vector<double>> triDiag;
+    if (rhs.size()!=size){
+        return triDiag;
+    }
     for(int i = 0; i < size; ++i) {
         std::vector<double> row;
-        for(int j = 0; j < size+1; ++j) {
-            if(j == size){
-                row.push_back(0);
-            }
-            else if (j == i -1){
+        for(int j = 0; j < size; ++j) {
+            /*if(j == size){
+                row.push_back(rhs[i]);
+            }*/
+            if (j == i -1){
                 row.push_back(b);
             }else if (j == i){
                 row.push_back(a);
