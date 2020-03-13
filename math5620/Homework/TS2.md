@@ -16,11 +16,12 @@ Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)
 
 #### Task 2: Implement an algorithm for solving the linear system in the book for the elliptic problem. pg. 15, 16  
 Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)  
-
-    tridiag * rhs:
-    [ 0 0 0 0 0 7 ]
+AU = F where F is the right hand side.
+U =  
 
 #### Task 3: Write up the results that you obtain in the approximate solution of the elliptic problem.  
+The basic idea is u''(x) = f(x)  
+Task 2 shows the approximation of u from the given matrix and rhs.
 
 #### Task 4: Write a code that will compute the coefficients for a finite difference approximation of a given derivative. There is a version of the code (in Matlab) that will do the job. If you use Matlab to get this done, expand out all of the shorthand notation that Matblab uses.  
 
