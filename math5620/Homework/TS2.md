@@ -14,7 +14,11 @@ Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)
     rhs:
     [ 1 2 3 4 5 6 ]
 
-#### Task 2: Implement an algorithm for solving the linear system in the book for the elliptic problem. pg. 15, 16
+#### Task 2: Implement an algorithm for solving the linear system in the book for the elliptic problem. pg. 15, 16  
+Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)  
+
+    tridiag * rhs:
+    [ 0 0 0 0 0 7 ]
 
 #### Task 3: Write up the results that you obtain in the approximate solution of the elliptic problem.  
 
