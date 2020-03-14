@@ -1,6 +1,6 @@
 # Math 5620 Software Manual  
 ### Basic Routines  
-  
-### Root Finding Methods  
+[genTriDiagMat](https://GFTBS.github.io/math5620/Software_Manual/genTriDiagMat)
+
   
   
