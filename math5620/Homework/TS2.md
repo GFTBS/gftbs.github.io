@@ -31,5 +31,7 @@ Task 2 shows the approximation of u from the given matrix and rhs.
 
 
 #### Task 6: Search the internet for applications that involve modeling real physical processes with a simple elliptic ODE. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.  
+https://content.sciendo.com/view/journals/amns/3/1/article-p311.xml?lang=en  
+This site demonstrates a few uses of modeling physics and the finite difference method. the behavior of electric, gravitational, and fluid potentials are modeled and analyzed, although this focuses more on methods than uses. For uses in gravitational fields of study the model would rely on predicting gravitational forces, then update actual values during the travel, where in fluid flow, it may just be estimated for whatever plan to be proposed.  
 
 
