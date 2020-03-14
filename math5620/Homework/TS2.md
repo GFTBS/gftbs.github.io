@@ -27,6 +27,7 @@ Task 2 shows the approximation of u from the given matrix and rhs.
 #### Task 4: Write a code that will compute the coefficients for a finite difference approximation of a given derivative. There is a version of the code (in Matlab) that will do the job. If you use Matlab to get this done, expand out all of the shorthand notation that Matblab uses.  
 
 #### Task 5: Write up a software manual page (we will go through a template in class. Put pages in for the codes you have written for this homework assignment.  
+[Manual](https://gftbs.github.io/math5620/Software_Manual/toc)
 
 
 #### Task 6: Search the internet for applications that involve modeling real physical processes with a simple elliptic ODE. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.  
