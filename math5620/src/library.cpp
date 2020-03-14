@@ -13,7 +13,8 @@
 // Matrix Functions
 
 // Generates a size x size + 1 tri diag matrix where a is the center, b is the left, and c is the right diagonal.
-std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, int size, std::vector<double> rhs){
+std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, const std::vector<double>& rhs){
+    int size = rhs.size();
     std::vector<std::vector<double>> triDiag;
     if (rhs.size()!=size){
         return triDiag;
@@ -37,6 +38,24 @@ std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, int
         triDiag.push_back(row);
     }
     return triDiag;
+}
+
+std::vector<double> approxU(std::vector<std::vector<double>> mat, std::vector<double> rhs){
+    std::vector<double> U;
+    for(unsigned int i =1; i < rhs.size();++i){
+        double temp =mat[i][i-1]/mat[i-1][i-1];
+        mat[i][i] -= temp*mat[i-1][i];
+        rhs[i] -= temp*rhs[i-1];
+        mat[i][i-1] =0;
+    }
+    for(unsigned int i =0; i < rhs.size();++i){
+        U.push_back(rhs[i]/mat[i][i]);
+    }
+    for(unsigned int i =rhs.size()-1; i > 0;--i){
+        U[i]=(rhs[i] - mat[i][i+1]*U[i+1])/mat[i][i];
+    }
+
+    return U;
 }
 
 

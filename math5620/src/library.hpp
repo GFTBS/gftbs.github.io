@@ -4,8 +4,8 @@
 #include <vector>
 
 // Matrix Functions
-std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, int size, std::vector<double> rhs);
-
+std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, const std::vector<double>& rhs);
+std::vector<double> approxU(std::vector<std::vector<double>> mat, std::vector<double> rhs);
 
 
 
