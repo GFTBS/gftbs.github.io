@@ -18,6 +18,7 @@ Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)
 Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)  
 AU = F where F is the right hand side.
 U =  
+    [ -0.5 -15 -20 -22 -20 -13 ]  
 
 #### Task 3: Write up the results that you obtain in the approximate solution of the elliptic problem.  
 The basic idea is u''(x) = f(x)  
@@ -27,5 +28,7 @@ Task 2 shows the approximation of u from the given matrix and rhs.
 
 #### Task 5: Write up a software manual page (we will go through a template in class. Put pages in for the codes you have written for this homework assignment.  
 
+
 #### Task 6: Search the internet for applications that involve modeling real physical processes with a simple elliptic ODE. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.  
+
 
