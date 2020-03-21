@@ -1,1 +1,3 @@
-
+### Task 6: Search the internet for discussions of handling Dirichlet versus Neumann conditions. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.  
+https://www.sciencedirect.com/topics/engineering/neumann-boundary-condition  
+This site shows the difference with the given topic of Fluid Mechanics of Viscoelasticity. If Dirichlet boundaries are used, then the prescribed temperature will enter and flow through the system. If th Neumann conditions are used, then the outward flux is known. Both of these require the endpoint to be viewed seperately from the internal points.
