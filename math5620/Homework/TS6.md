@@ -1,0 +1,1 @@
+#### Task 6: Search the internet for articles that compare 5 point stencil finite difference approximations and 9 point stencil finite difference approximations. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.  
