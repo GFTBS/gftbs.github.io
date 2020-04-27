@@ -17,8 +17,21 @@ Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)
 #### Task 2: Implement an algorithm for solving the linear system in the book for the elliptic problem. pg. 15, 16  
 Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)  
 AU = F where F is the right hand side.
-U =  
-    [ -0.5 -15 -20 -22 -20 -13 ]  
+
+    Mat:
+    [ -2 1 0 0 0 0 ]
+    [ 1 -2 1 0 0 0 ]
+    [ 0 1 -2 1 0 0 ]
+    [ 0 0 1 -2 1 0 ]
+    [ 0 0 0 1 -2 1 ]
+    [ 0 0 0 0 1 -2 ]
+    rhs:
+    [ 1 2 3 4 5 6 ]
+    U approx:
+    [ -8 -15 -20 -22 -20 -13 ]
+
+    Mat*U
+    [ 1 2 3 4 5 6 ]
 
 #### Task 3: Write up the results that you obtain in the approximate solution of the elliptic problem.  
 The basic idea is u''(x) = f(x)  
