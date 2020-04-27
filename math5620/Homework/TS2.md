@@ -37,6 +37,8 @@ AU = F where F is the right hand side.
 The basic idea is u''(x) = f(x)  
 Task 2 shows the approximation of u from the given matrix and rhs.
 
+Note: Spent way too long on this because OpenMP was multiplying the matrix and mixing up the order on a push instead of using the reserved space I gave it. The interesting part was the order was always the same, until one time it randomly changed. which started the investigation.
+
 #### Task 4: Write a code that will compute the coefficients for a finite difference approximation of a given derivative. There is a version of the code (in Matlab) that will do the job. If you use Matlab to get this done, expand out all of the shorthand notation that Matblab uses.  
 
 #### Task 5: Write up a software manual page (we will go through a template in class. Put pages in for the codes you have written for this homework assignment.  
