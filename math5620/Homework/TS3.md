@@ -16,6 +16,12 @@ output from ts3Demo.cpp
   
 These should all be zero, but the boundary conditions throw in an acceleration from nothing to something. Only the non boundary values are to be used.
 ### Task 3: Repeat the previous task with f(x)=10.0 sin(2πx) and use homogeneous Dirichlet boundary conditions.  
+output from ts3Demo.cpp
+
+    U for f(x)=sin(2pi*x)
+    [ -1.07289 -2.14578 -2.51167 -1.87756 -0.536444 0.804667 1.43878 1.07289 ]  
+    
+Adding more mesh points makes vectors too large to show in markdown.
   
 ### Task 4: Repeat the previous two tasks combining f(x) from Task 3 with the boundary conditions given in Task 2.  
   
