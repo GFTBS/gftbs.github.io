@@ -3,6 +3,7 @@
 [genTriDiagMat](https://GFTBS.github.io/math5620/Software_Manual/genTriDiagMat)  
 [approxU](https://GFTBS.github.io/math5620/Software_Manual/approxU)  
 [Differential Coeffs](https://GFTBS.github.io/math5620/Software_Manual/diffCoef)  
+[PentaDiag](https://GFTBS.github.io/math5620/Software_Manual/pentaDiag)  
   
 [Absolute Error](https://gftbs.github.io/Software_Manual/procedures/absoluteError)    
 [Relative Error](https://gftbs.github.io/Software_Manual/procedures/relError)   
