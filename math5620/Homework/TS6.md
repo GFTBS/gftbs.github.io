@@ -7,6 +7,19 @@
   
 ### Task 4: Build routines that will assemble the matrix for a nine point stencil. Also build a code that will create the right hand side for the Poisson equation.  
 [ninePoint](https://gftbs.github.io/math5620/Software_Manual/ninePoint)  
+output from ts6Demo.cpp  
+
+      nine Diagonal Matrix for [1,2,3,4,5,6,7,8,9,10]
+
+      [ 1 4 1 4 -20 4 1 4 1 1 ]
+      [ 1 4 1 4 -20 4 1 4 1 2 ]
+      [ 1 4 1 4 -20 4 1 4 1 3 ]
+      [ 1 4 1 4 -20 4 1 4 1 4 ]
+      [ 1 4 1 4 -20 4 1 4 1 5 ]
+      [ 1 4 1 4 -20 4 1 4 1 6 ]
+      [ 1 4 1 4 -20 4 1 4 1 8 ]
+      [ 1 4 1 4 -20 4 1 4 1 9 ]
+      [ 1 4 1 4 -20 4 1 4 1 10 ]
 
 ### Task 5: Build a code using previously created codes that will compute an approximate solution for the Poisson equation using a 9 point stencil for the Poisson equation in Task 1.  
   
