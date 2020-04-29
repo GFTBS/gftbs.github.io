@@ -11,6 +11,9 @@
 #include <random>
 
 // Matrix Functions
+int factorial(int n){
+    return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;
+}
 
 // Generates a size x size + 1 tri diag matrix where a is the center, b is the left, and c is the right diagonal.
 std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, const std::vector<double>& rhs){
@@ -51,13 +54,34 @@ std::vector<double> approxU(std::vector<std::vector<double>> mat, std::vector<do
     for(unsigned int i =0; i < rhs.size();++i){
         U.push_back(rhs[i]/mat[i][i]);
     }
-    for(unsigned int i =rhs.size()-1; i > 0;--i){
+    for(int i =int(rhs.size()-1); i >= 0;--i){
         U[i]=(rhs[i] - mat[i][i+1]*U[i+1])/mat[i][i];
     }
 
     return U;
 }
-
+std::vector<double> diffCoef(const std::vector<double>& locations, int order){
+    std::vector<std::vector<double>> mat;
+    for(int i =0; i < locations.size();i++){
+        std::vector<double> temp;
+        temp.reserve(locations.size());
+        for(int j =0; j < locations.size();j++){
+            temp.push_back(pow(locations[j],i));
+        }
+        mat.push_back(temp);
+    }
+    std::vector<double> temp;
+    for(int i =0; i < locations.size();i++){
+        if(i == locations.size()-1){
+            temp.push_back(factorial(i));
+        }else{
+            temp.push_back(0);
+        }
+    }
+    //printMat(mat);
+    //printVec(temp);
+    return approxU(mat, temp);
+}
 
 
 
@@ -526,7 +550,6 @@ std::vector<double> matTimesVector(const std::vector<std::vector<double>>& matri
     if (matrix[0].size()!=v.size()){ return std::vector<double>{0};}
     std::vector<double> answer;
     answer.reserve(matrix.size());
-#pragma omp parallel for
     for(unsigned int i =0; i < matrix.size();++i){
         answer.push_back(dotProduct(matrix[i],v));
     }

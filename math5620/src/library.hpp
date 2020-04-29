@@ -6,6 +6,7 @@
 // Matrix Functions
 std::vector<std::vector<double>> genTriDiagMat(double a, double b, double c, const std::vector<double>& rhs);
 std::vector<double> approxU(std::vector<std::vector<double>> mat, std::vector<double> rhs);
+std::vector<double> diffCoef(const std::vector<double>& locations, int order);
 
 
 
