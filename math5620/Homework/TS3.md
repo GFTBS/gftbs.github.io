@@ -24,7 +24,12 @@ output from ts3Demo.cpp
 Adding more mesh points makes vectors too large to show in markdown.
   
 ### Task 4: Repeat the previous two tasks combining f(x) from Task 3 with the boundary conditions given in Task 2.  
+
+    U for f(x)=sin(2pi*x) with Boundary conditions
+    [ 0 -2.14578 -2.51167 -1.87756 -0.536444 0.804667 1.43878 3 ] 
   
+This allows the boundaries to be used, Where in the previous task the boundaries were useless.  
+
 ### Task 5: Create a new code from the elliptic problem with Neumann boundary conditions. Using the same data as in Task 4 test your code using homogeneous Neumann conditions. Also, run a test case for unit fluxes at both ends of the domain.  
 
 ### Task 6: Search the internet for discussions of handling Dirichlet versus Neumann conditions. Write a brief paragraph (3 or 4 sentences) that describes your findings. Include links to the sites you cite.  
