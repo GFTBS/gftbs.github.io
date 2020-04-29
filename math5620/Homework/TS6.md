@@ -9,7 +9,7 @@
 [ninePoint](https://gftbs.github.io/math5620/Software_Manual/ninePoint)  
 output from ts6Demo.cpp  
 
-      pentaDiagonal Matrix for [1,2,3,4,5,6,7,8,9,10]
+      nine Diagonal Matrix for [1,2,3,4,5,6,7,8,9,10]
 
       [ 1 4 1 4 -20 4 1 4 1 1 ]
       [ 1 4 1 4 -20 4 1 4 1 2 ]
