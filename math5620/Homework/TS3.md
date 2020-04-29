@@ -3,7 +3,7 @@
 [LU](https://gftbs.github.io/Software_Manual/procedures/Matrix/luFactorization)  
 Solvers can use the LU factorized matrix even though it is one matrix that contains both, because they only look at the upper when it is necessary.  
   
-### Task 2: Apply the code from the previous task to the case where f(x)=0 and u(0)=1 and u(1)=3. Use some graphing utility to display your results. Do this for varying numbers of mesh points. 
+### Task 2: Apply the code from the previous task to the case where f(x)=0 and u(0)=1 and u(1)=3. Do this for varying numbers of mesh points. 
 output from ts3Demo.cpp
 
     Boundary [0,3] with mesh size 1/8
