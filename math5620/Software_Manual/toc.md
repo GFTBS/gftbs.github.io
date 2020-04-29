@@ -1,6 +1,8 @@
 # Math 5620 Software Manual  
 ### Basic Routines  
 [genTriDiagMat](https://GFTBS.github.io/math5620/Software_Manual/genTriDiagMat)  
+[approxU](https://GFTBS.github.io/math5620/Software_Manual/approxU)  
+  
 [Absolute Error](https://gftbs.github.io/Software_Manual/procedures/absoluteError)    
 [Relative Error](https://gftbs.github.io/Software_Manual/procedures/relError)   
 [Single Precision Test](https://gftbs.github.io/Software_Manual/procedures/singlePrecision)    
