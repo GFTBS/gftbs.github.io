@@ -1,4 +1,7 @@
 ### Task 1: For the tridiagonal matrix that arises from the central difference applied to the elliptic problem u′′=f(x) on [0,1] develop an algorithm that performs the LU decomposition of the coefficient matrix. Also, develop the forward and backward substitution methods to go along with the LU factorization.  
+[Software Manual](https://gftbs.github.io/math5620/Software_Manual/toc)  
+[LU](https://gftbs.github.io/Software_Manual/procedures/Matrix/luFactorization)  
+[Forward Backward](https://gftbs.github.io/math5620/Software_Manual/approxU)
   
 ### Task 2: Apply the code from the previous task to the case where f(x)=0 and u(0)=1 and u(1)=3. Use some graphing utility to display your results. Do this for varying numbers of mesh points. Make the coarsest mesh size h=1/8 and refine to h=1/256.  
   
