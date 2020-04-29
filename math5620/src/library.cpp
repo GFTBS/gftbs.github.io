@@ -82,6 +82,42 @@ std::vector<double> diffCoef(const std::vector<double>& locations, int order){
     //printVec(temp);
     return approxU(mat, temp);
 }
+std::vector<std::vector<double>> pentaDiag(double a, double b, double c, double d, double e, const std::vector<double>& rhs){
+    std::vector<std::vector<double>> mat;
+    for (int i = 0; i < rhs.size(); ++i) {
+        std::vector<double> temp;
+        temp.push_back(a);
+        temp.push_back(b);
+        temp.push_back(c);
+        temp.push_back(d);
+        temp.push_back(e);
+        temp.push_back(rhs[i]);
+        mat.push_back(temp);
+    }
+    return mat;
+}
+std::vector<std::vector<double>> ninePoint(const std::vector<double>& points, const std::vector<double>& rhs){
+    std::vector<std::vector<double>> mat;
+    for (int i = 0; i < rhs.size(); ++i) {
+        std::vector<double> temp;
+        for (int j = 0; j < points.size(); ++j) {
+            temp.push_back(points[j]);
+        }
+        temp.push_back(rhs[i]);
+        mat.push_back(temp);
+    }
+    return mat;
+}
+std::vector<double> dirichletBoundary(double start, double end, int size){
+    std::vector<double> vec;
+    double dif = end - start;
+    vec.push_back(start);
+    for (int i = 1; i < size - 1; ++i) {
+        vec.push_back(start + i*dif/size);
+    }
+    vec.push_back(end);
+    return vec;
+}
 
 
 
