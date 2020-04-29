@@ -40,6 +40,11 @@ Task 2 shows the approximation of u from the given matrix and rhs.
 Note: Spent way too long on this because OpenMP was multiplying the matrix and mixing up the order on a push instead of using the reserved space I gave it. The interesting part was the order was always the same, until one time it randomly changed. which started the investigation.
 
 #### Task 4: Write a code that will compute the coefficients for a finite difference approximation of a given derivative. There is a version of the code (in Matlab) that will do the job. If you use Matlab to get this done, expand out all of the shorthand notation that Matblab uses.  
+Output from [TS2Demo](https://gftbs.github.io/math5620/src/TS2Demo.cpp)  
+
+    get Coefficients for points (-1, 0, 1):
+
+    [ 2 -2 2 ]
 
 #### Task 5: Write up a software manual page (we will go through a template in class. Put pages in for the codes you have written for this homework assignment.  
 [Manual](https://gftbs.github.io/math5620/Software_Manual/toc)
