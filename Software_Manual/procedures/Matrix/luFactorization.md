@@ -35,28 +35,28 @@ Output from the lines above:
 
 **Implementation/Code:** The following is the code for luFactorization(std::vector<std::vector<double>>& matrix)
 
-void luFactorization(std::vector<std::vector<double>>& matrix){
-    //Lower matrix is where the zeros should be in the upper matrix. Diagonals of the lower matrix are assumed to be one
+    void luFactorization(std::vector<std::vector<double>>& matrix){
+        //Lower matrix is where the zeros should be in the upper matrix. Diagonals of the lower matrix are assumed to be one
 
-    double uCoefficients[matrix.size()][matrix.size()];
-    for(unsigned int i=1;i<matrix.size();++i){
+        double uCoefficients[matrix.size()][matrix.size()];
+        for(unsigned int i=1;i<matrix.size();++i){
 
-#pragma omp parallel for
-        for(unsigned int j=i;j<matrix.size();++j){
-            if(matrix[j][i-1]==0){uCoefficients[j][i-1]=0; }
-            else if(matrix[i-1][i-1]==0){uCoefficients[j][i-1]=0; }
-            else {
-                double ratio = matrix[j][i - 1] / matrix[i - 1][i - 1];
-                uCoefficients[j][i - 1] = ratio;
-                for (unsigned int k = 0; k < matrix[j].size(); ++k) {
-                    matrix[j][k] = matrix[j][k] - ratio * matrix[i - 1][k];
+    #pragma omp parallel for
+            for(unsigned int j=i;j<matrix.size();++j){
+                if(matrix[j][i-1]==0){uCoefficients[j][i-1]=0; }
+                else if(matrix[i-1][i-1]==0){uCoefficients[j][i-1]=0; }
+                else {
+                    double ratio = matrix[j][i - 1] / matrix[i - 1][i - 1];
+                    uCoefficients[j][i - 1] = ratio;
+                    for (unsigned int k = 0; k < matrix[j].size(); ++k) {
+                        matrix[j][k] = matrix[j][k] - ratio * matrix[i - 1][k];
+                    }
                 }
             }
         }
-    }
-    for(unsigned int i=1;i<matrix.size();++i) {
-        for (unsigned int j = 0; j < i; ++j) {
-            matrix[i][j]=uCoefficients[i][j];
+        for(unsigned int i=1;i<matrix.size();++i) {
+            for (unsigned int j = 0; j < i; ++j) {
+                matrix[i][j]=uCoefficients[i][j];
+            }
         }
     }
-}
